@@ -20,8 +20,7 @@ return new class extends Migration
             //Foreign Key
             $table->foreign("role_id")->references("id")->on("roles")->onDelete("cascade");
             $table->foreign("permission_id")->references("id")->on("permissions")->onDelete("cascade");
-            //Primary Key
-            $table->primary(['role_id', 'permission_id']);
+
             $table->timestamps();
         });
     }

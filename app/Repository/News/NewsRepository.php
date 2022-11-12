@@ -29,6 +29,7 @@ class NewsRepository extends BaseRepository
         $data['slug'] = Str::slug($data['title']);
         return $this->model->create($data);
     }
+    
     public function update($news, $data)
     {
         if (isset($data["image"])) {

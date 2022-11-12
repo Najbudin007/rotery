@@ -12,6 +12,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectTypeController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
@@ -61,6 +62,7 @@ Route::group(["middleware" => ["auth", "admin"]], function () {
     Route::resource("/mail", MailController::class);
     Route::resource("/project-type", ProjectTypeController::class);
     Route::resource("/project", ProjectController::class);
+    Route::resource("/setting", SiteSettingController::class);
 });
 Route::group(
     ["middleware" => ["auth", "member"], "prefix" => "member"],

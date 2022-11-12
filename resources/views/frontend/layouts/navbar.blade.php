@@ -11,11 +11,9 @@
 
                                     <a href="/home.html"
                                         class="flex items-center rounded-xs py-12 px-16 bg-orange text-white  ">
-
                                         <button class="c-btn-orange uppercase  flex items-center justify-center">
-                                            <img src="{{ asset('frontend-theme/images/earth.svg') }}"
-                                                alt=" Your Steel Storage" />
-
+                                            {{-- <img src="{{ asset('frontend-theme/images/earth.svg') }}"
+                                                alt=" Your Steel Storage" /> --}}
                                             <span
                                                 class='ml-6 font-semibold font-openSans text-xs leading-[117.4%]'>District
                                                 website</span>
