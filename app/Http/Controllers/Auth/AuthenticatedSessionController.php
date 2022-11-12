@@ -28,14 +28,14 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
+        
         $request->authenticate();
         $request->session()->regenerate();
-        if (Auth::user()->type === "admin") {
+        if (Auth::user()->role->name == "admin") {
             return redirect()->intended(RouteServiceProvider::HOME);
-        } else if (str_contains(auth()->user()->role->name, "member")) {
+        }
+        if (Auth::user()->role->name == "member") {
             return redirect()->intended(RouteServiceProvider::MEMBER_HOME);
-        } else {
-            return;
         }
     }
 
