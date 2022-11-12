@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="21px" viewBox="0 0 27 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-check</title>
+    <defs>
+        <polygon id="path-1" points="8.3775 15.8775 2.1225 9.6225 0 11.745 8.3775 20.1225 26.3775 2.1225 24.255 0"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Text-group" transform="translate(-4.000000, -10.000000)">
+            <g id="Group-4" transform="translate(4.000000, 1.000000)">
+                <g id="icon-check" transform="translate(0.000000, 9.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="5.-Colors/Primary-Copy" mask="url(#mask-2)" fill="#50A500">
+                        <g transform="translate(-4.000000, -10.000000)" id="Primary">
+                            <rect x="0" y="0" width="36" height="36"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

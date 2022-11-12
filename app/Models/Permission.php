@@ -10,4 +10,12 @@ class Permission extends Model
 {
     use HasFactory, SoftDeletes;
     protected $guarded = [];
+
+    public function role() {
+        return $this->belongsToMany(Role::class, 'roles_permissions');
+    }
+
+    public function users() {
+        return $this->belongsToMany(User::class, 'roles_permissions');
+    }
 }

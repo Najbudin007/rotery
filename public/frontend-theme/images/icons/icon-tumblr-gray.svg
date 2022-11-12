@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <path d="M7.33056545,11.1182451 C7.07173603,11.2416882 6.57674327,11.3490906 6.20763455,11.3583314 C5.09324703,11.3881461 4.87696013,10.5755664 4.86798086,9.98650931 L4.86798086,5.65336123 L7.66332124,5.65336123 L7.66332124,3.54576264 L4.87765755,3.54576264 L4.87765755,0 L2.83919056,0 C2.8056273,0 2.74704414,0.0293787527 2.7387623,0.103915351 C2.61950374,1.18909848 2.1117831,3.0937483 0,3.85532926 L0,5.65327405 L1.40878529,5.65327405 L1.40878529,10.2010527 C1.40878529,11.7583009 2.5574335,13.9705995 5.5897218,13.9183802 C6.61283468,13.9008576 7.74910371,13.4726427 8,13.1029237 L7.33056545,11.1182451" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Icons/ic_tumblr" transform="translate(-11.000000, -8.000000)">
+            <g id="Group" transform="translate(11.000000, 8.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Icon"></g>
+                <g id="5.-Colors/Gray-85" mask="url(#mask-2)" fill="#D8D8D8">
+                    <g transform="translate(-9.000000, -6.000000)" id="Gray-85">
+                        <rect x="0" y="0" width="26" height="26"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

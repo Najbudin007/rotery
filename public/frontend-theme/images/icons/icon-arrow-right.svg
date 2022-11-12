@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="37px" viewBox="0 0 30 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon color</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-Base-Elements/Button/5.-Extra/Video-60px" transform="translate(-22.000000, -17.000000)" fill="#FFFFFF">
+            <path d="M25.0649022,17.9279224 L50.3086889,33.8070785 C51.2436636,34.3952078 51.5248374,35.6299275 50.9367082,36.5649022 C50.7770831,36.8186651 50.5624518,37.0332965 50.3086889,37.1929215 L25.0649022,53.0720776 C24.1299275,53.6602069 22.8952078,53.3790331 22.3070785,52.4440584 C22.106447,52.1251057 22,51.7559634 22,51.3791561 L22,19.6208439 C22,18.5162744 22.8954305,17.6208439 24,17.6208439 C24.3768073,17.6208439 24.7459496,17.7272909 25.0649022,17.9279224 Z" id="icon-color"></path>
+        </g>
+    </g>
+</svg>
