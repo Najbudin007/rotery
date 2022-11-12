@@ -100,7 +100,7 @@ class UserController extends Controller
     {
         $this->userRepository->update($user, $request->validated());
         notify()->success("user is updated");
-        return redirect()->back();
+        return redirect()->route('user.index');
     }
 
     /**

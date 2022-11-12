@@ -4,7 +4,7 @@
 
         <div class="card card-primary mt-2">
             <div class="card-header">
-                <h3 class="card-title">Create User</h3>
+                <h3 class="card-title">Update User</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
@@ -36,7 +36,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Address</label>
-                                <input type="text" class="form-control" placeholder="Enter role name" name="address"
+                                <input type="text" class="form-control" placeholder="Enter Address" name="address"
                                     value="{{ $user->address ?? '' }}" required>
                                 @error('address')
                                     <div class="text-red">
@@ -52,7 +52,7 @@
                                     style="height:170px;object-fit:contain;width:100%;">
                                 <label for="exampleInputEmail1"> Profile Picture</label>
                                 <input type="file" class="form-control" onchange="loadFile9(event)"
-                                    placeholder="Add profile picture" name="image" required>
+                                    placeholder="Add profile picture" name="image">
                                 @error('image')
                                     <div class="text-red">
                                         {{ $message }}
@@ -61,7 +61,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Email</label>
-                                <input type="email" class="form-control" placeholder="Enter email" name="email"
+                                <input type="email" class="form-control" placeholder="Enter Email" name="email"
                                     value="{{ $user->email ?? '' }}" required>
                                 @error('email')
                                     <div class="text-red">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Password</label>
-                                <input type="password" class="form-control" placeholder="Enter role name" name="password"
+                                <input type="password" class="form-control" placeholder="Enter Password" name="password"
                                     value="">
                                 @error('password')
                                     <div class="text-red">
@@ -84,7 +84,7 @@
                                 <select name="role_id" id="" class="form-control">
                                     <option value="">Select Role</option>
                                     @foreach (App\Models\Role::latest()->get() as $role)
-                                        <option class="form-control" value="{{ $role->id }}">{{ $role->name }}
+                                        <option class="form-control" @if($user->role->id == $role->id) selected @endif value="{{ $role->id }}">{{ $role->name }}
                                         </option>
                                     @endforeach
 

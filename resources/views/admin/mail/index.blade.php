@@ -7,11 +7,11 @@
         <div class=" mt-4">
             <div class="card">
                 <div class="card-header text-center font-weight-bold d-flex justify-content-between w-100">
-                    <h4 class="my-auto">News News</h4>
+                    <h4 class="my-auto">Mails Table</h4>
                     <button class="btn btn-sm btn-danger mx-2 d-none" id="deleteAllBtn">Delete All</button>
 
                     <a href="{{ route('mail.create') }}" class="btn btn-sm btn-outline-success ml-auto">Add
-                        News</a>
+                        Mail</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered" id="datatables-example">

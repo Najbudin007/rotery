@@ -6,8 +6,6 @@
             <div class="card-header">
                 <h3 class="card-title">Create User</h3>
             </div>
-            <!-- /.card-header -->
-            <!-- form start -->
             <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
@@ -15,7 +13,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Name</label>
-                                <input type="text" class="form-control" placeholder="Enter role name" name="name"
+                                <input type="text" class="form-control" placeholder="Enter Name" name="name"
                                     value="{{ $role->name ?? '' }}" required>
                                 @error('name')
                                     <div class="text-red">
@@ -25,9 +23,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Number</label>
-                                <input type="number" class="form-control" placeholder="Enter role name" name="number"
-                                    value="{{ $role->name ?? '' }}" required>
-                                @error('name')
+                                <input type="number" class="form-control" placeholder="Enter Number" name="number"
+                                    value="{{ $role->number ?? '' }}" required>
+                                @error('number')
                                     <div class="text-red">
                                         {{ $message }}
                                     </div>
@@ -35,9 +33,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Address</label>
-                                <input type="text" class="form-control" placeholder="Enter role name" name="address"
-                                    value="{{ $role->name ?? '' }}" required>
-                                @error('name')
+                                <input type="text" class="form-control" placeholder="Enter Address" name="address"
+                                    value="{{ $role->address ?? '' }}" required>
+                                @error('address')
                                     <div class="text-red">
                                         {{ $message }}
                                     </div>
@@ -59,8 +57,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Email</label>
-                                <input type="email" class="form-control" placeholder="Enter role name" name="email"
-                                    value="{{ $role->name ?? '' }}" required>
+                                <input type="email" class="form-control" placeholder="Enter Email" name="email"
+                                    value="{{ $role->email ?? '' }}" required>
                                 @error('email')
                                     <div class="text-red">
                                         {{ $message }}
@@ -69,8 +67,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Password</label>
-                                <input type="password" class="form-control" placeholder="Enter role name" name="password"
-                                    value="{{ $role->name ?? '' }}" required>
+                                <input type="password" class="form-control" placeholder="Enter Password" name="password"
+                                    value="{{ $role->password ?? '' }}" required>
                                 @error('password')
                                     <div class="text-red">
                                         {{ $message }}
@@ -107,9 +105,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.card-body -->
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>

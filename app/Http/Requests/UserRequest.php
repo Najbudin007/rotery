@@ -27,11 +27,11 @@ class UserRequest extends FormRequest
             "name" => "required",
             "email" => "required|unique:users,id",
             "status" => "required",
-            "password" => "required",
+            "password" => "sometimes",
             "address" => "required",
             "number" => "required",
             "image" => "sometimes",
-            "role" => "sometimes"
+            "role_id" => "sometimes"
         ];
     }
 }

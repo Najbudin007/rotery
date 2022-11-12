@@ -64,6 +64,7 @@ class MailController extends Controller
     public function store(MailRequest $request)
     {
         $this->mailRepository->store($request->validated());
+        notify()->success("Mail Sent Successfully");
         return redirect()->back();
     }
 
