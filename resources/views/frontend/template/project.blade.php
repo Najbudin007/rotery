@@ -1,106 +1,372 @@
-   <div class="mt-80">
+<div
+class="space-y-6 md:space-y-10 lg:space-y-12 py-6 md:py-10 lg:pb-0 lg:pt-[76px]"
+>
+<div class="px-4 md:px-10 xl:px-14 max-w-7xl mx-auto">
+  <div class="flex justify-between items-end">
+    <div>
+      <div>
+        <div>
+          <img
+            src="./resources/images/icons/zigzag-line-yellow.svg"
+            alt="zigzag line"
+          />
+        </div>
+        <div
+          class="text-xxs text-secondary"
+          style="letter-spacing: 0.29em"
+        >
+          WHAT WE HAVE DONE?
+        </div>
+      </div>
+      <div
+        class="text-lg text-primary md:text-2xl pt-1 font-playFair font-700"
+      >
+        Our Projects
+      </div>
+    </div>
+    <a
+      href="projects/all-projects.html"
+      class="hidden lg:flex items-center space-x-4 cursor-pointer bg-primary overflow-hidden rounded px-6 h-10.5 text-xs font-500 text-white"
+    >
+      <div>View All</div>
+      <div>
+        <img
+          src="./resources/images/icons/double-arrow.svg"
+          alt="double arrow"
+        />
+      </div>
+    </a>
+  </div>
+</div>
 
-       <div class="o-container px-16 flex items-center justify-between">
-           <div>
-               <img src="{{ asset('frontend-theme/images/icon-curl-yellow.svg') }}">
+<!-- Projects Cards Slider -->
+<div class="flex">
+  <div class="projects-swiper overflow-hidden relative">
+    <div class="swiper-wrapper">
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_cAtzHUz7Z8g.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-               <span class="font-regular text-xs leading-[140%] text-orange uppercase">
-                   What we have done?</span>
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_f8ld5zt3a3k.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-               <h1 class="font-bold font-playFair text-blue-100 text-2xl leading-[140%]">Our Projects</h1>
-           </div>
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_IWoHLg2-UQU.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-           <div>
-               <button class=" bg-blue-100 px-20 py-10 rounded-xs text-white flex items-center">
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_cAtzHUz7Z8g.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-                   <span class=' font-medium text-xs leading-[117.4%] mr-4 '>View All</span>
-                   <img src="{{ asset('frontend-theme/images/arrow.svg') }}" alt=" Your Steel Storage" />
-               </button>
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_f8ld5zt3a3k.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-           </div>
-       </div>
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_IWoHLg2-UQU.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-       <div class="mt-48">
-           <div class="grid grid-cols-5  ">
-               <div class="relative flex justify-center items-center">
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_cAtzHUz7Z8g.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-                   <img src="{{ asset('frontend-theme/images/project-1.png') }}" class="w-full " />
-                   <div
-                       class=" absolute w-full h-full bg-orange bg-opacity-50 opacity-0 hover:opacity-100 flex flex-col items-center justify-center">
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_f8ld5zt3a3k.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_IWoHLg2-UQU.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-                       <p class="font-semiBold text-2xl text-white">Lorem ipsum dolor sit amet</p>
+      <!-- Individual Proect Card -->
+      <div class="project-card flex-shrink-0 relative group swiper-slide">
+        <div class="h-full">
+          <img
+            src="./resources/images/home/projects/unsplash_cAtzHUz7Z8g.png"
+            alt="individual project"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-secondary bg-opacity-90 opacity-0 transition-all duration-300 cursor-default group-hover:opacity-100 text-white p-6 flex flex-col justify-center space-y-4"
+        >
+          <div class="text-white text-2xl font-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="flex">
+            <a href="projects/individual-project.html">
+              <img
+                src="./resources/images/icons/right-arrow.svg"
+                alt="right arrow"
+                class="cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                       <img src="{{ asset('frontend-theme/images/arrow-left.svg') }}" />
+    <!-- Left And Right Arrows For Project Slider -->
+    <div class="hidden lg:block">
+      <div
+        class="swiper-button-prev w-0 h-0 overflow-hidden"
+        id="project-slider-prev"
+      ></div>
+      <div
+        class="swiper-button-next w-0 h-0 overflow-hidden"
+        id="project-slider-next"
+      ></div>
+    </div>
 
+    <!-- Custom Arrows For Slider -->
+    <div
+      class="absolute top-1/2 -translate-y-1/2 hidden lg:flex w-full h-0 px-8 justify-between items-center"
+      style="z-index: 11"
+    >
+      <div
+        class="overflow-hidden bg-white border border-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer bg-opacity-30 hover:bg-opacity-40 transition-all duration-300"
+        onclick="document.getElementById('project-slider-prev').click()"
+      >
+        <img
+          src="./resources/images/icons/left-arrow.svg"
+          class="w-5 h-5"
+          alt="left arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white border border-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer bg-opacity-30 hover:bg-opacity-40 transition-all duration-300 rotate-180"
+        onclick="document.getElementById('project-slider-next').click()"
+      >
+        <img
+          src="./resources/images/icons/left-arrow.svg"
+          class="w-5 h-5"
+          alt="right arrow"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
-                   </div>
-
-               </div>
-
-               <div class="relative flex justify-center items-center">
-                   <img src="{{ asset('frontend-theme/images/project-2.png') }}" class="w-full" />
-                   <div
-                       class=" absolute w-full h-full bg-orange bg-opacity-50 opacity-0 hover:opacity-100 flex flex-col items-center justify-center">
-
-
-                       <p class="font-semiBold text-2xl text-white">Lorem ipsum dolor sit amet</p>
-
-                       <img src="{{ asset('frontend-theme/images/arrow-left.svg') }}" />
-
-
-                   </div>
-
-
-               </div>
-               <div class="relative flex justify-center items-center">
-                   <img src="{{ asset('frontend-theme/images/project-3.png') }}" class="w-full" />
-                   <div
-                       class=" absolute w-full h-full bg-orange bg-opacity-50 opacity-0 hover:opacity-100 flex flex-col items-center justify-center">
-
-
-                       <p class="font-semiBold text-2xl text-white">Lorem ipsum dolor sit amet</p>
-
-                       <img src="{{ asset('frontend-theme/images/arrow-left.svg') }}" />
-
-
-                   </div>
-
-               </div>
-
-               <div class="relative flex justify-center items-center">
-                   <img src="{{ asset('frontend-theme/images/project-4.png') }}" class="w-full" />
-                   <div
-                       class=" absolute w-full h-full bg-orange bg-opacity-50 opacity-0 hover:opacity-100 flex flex-col items-center justify-center">
-
-
-                       <p class="font-semiBold text-2xl text-white">Lorem ipsum dolor sit amet</p>
-
-                       <img src="{{ asset('frontend-theme/images/arrow-left.svg') }}" />
-
-
-                   </div>
-
-               </div>
-
-               <div class="relative flex justify-center items-center">
-                   <img src="{{ asset('frontend-theme/images/project-5.png') }}" class="w-full" />
-                   <div
-                       class=" absolute w-full h-full bg-orange bg-opacity-50 opacity-0 hover:opacity-100 flex flex-col items-center justify-center">
-
-
-                       <p class="font-semiBold text-2xl text-white">Lorem ipsum dolor sit amet</p>
-
-                       <img src="{{ asset('frontend-theme/images/arrow-left.svg') }}" />
-
-
-                   </div>
-
-               </div>
-
-
-           </div>
-
-       </div>
-
-   </div>
+<div class="flex justify-end px-4 md:px-10 lg:hidden">
+  <a
+    href="projects/all-projects.html"
+    class="flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary"
+  >
+    <div>View All</div>
+    <div>
+      <img
+        src="./resources/images/icons/double-arrow-yellow.svg"
+        alt="double arrow"
+      />
+    </div>
+  </a>
+</div>
+</div>

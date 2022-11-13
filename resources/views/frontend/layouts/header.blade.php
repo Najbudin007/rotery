@@ -1,22 +1,38 @@
 <head>
-    <meta charset="utf-8">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta charset="utf-8" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>HomePage</title>
-    <meta name="description" content="">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link href="{{ asset('frontend-theme/images/fav.png') }}" rel="shortcut icon">
+    <title>Rotary Club</title>
+    <meta
+      name="description"
+      content="Rotary Club of Himalayan Golf Course is an amazing
+    club that aims to provide astonishing experience"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link rel="icon" href="resources/images/favicon.ico" />
+    <link rel="shortcut icon" href="resources/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="resources/images/favicon.ico" />
 
-    <link href="https://use.typekit.net/obo3fvi.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('frontend-theme/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend-theme/css/main.custom.css') }}">
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@700&family=Open+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./resources/css/styles.css" />
+    <link rel="stylesheet" href="./resources/css/common.css" />
+    <link rel="stylesheet" href="./resources/css/home.css" />
+  </head>

@@ -1,0 +1,41 @@
+.about-hero-section,
+.about-hero-section img {
+  height: 234px;
+  letter-spacing: 0.035em;
+}
+
+.club-details {
+  margin-top: 132px;
+}
+.member-card {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-hero-section,
+  .about-hero-section img {
+    height: 399px;
+    font-size: 30px;
+  }
+  .about-hero-section .vector-bg {
+    width: 42px;
+    height: 63px;
+  }
+
+  .club-details {
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-hero-section,
+  .about-hero-section img {
+    height: 521px;
+    font-size: 40px;
+  }
+
+  .club-details {
+    margin-top: 260px;
+  }
+}

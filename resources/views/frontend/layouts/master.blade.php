@@ -1,62 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
+@include('frontend.layouts.header')
 
+  <body class="font-poppins font-400">
+    <!-- Navigation bar -->
+    @include('frontend.layouts.navbar')
 
+    <!-- Hero Section -->
+    @include('frontend.template.banner')
 
-<body class="">
+    <!-- About Us -->
+    @include('frontend.template.aboutus')
 
+    <!-- Notice And News -->
+    <div class="relative">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="lg:flex">
+          <!-- Notice -->
+    @include('frontend.template.notice')
 
-    @include('frontend.layouts.header')
-
-    <header class="c-header">
-        @include('frontend.layouts.topbar')
-
-        @include('frontend.layouts.navbar')
-
-
-    </header>
-    <!--/.c-header-->
-
-    <main class="js-padding-top">
-        @include('frontend.template.banner')
-
-        @include('frontend.template.aboutus')
-        <div class="bg-gray-200 mt-96">
-
-            <div class="o-container px-16">
-                <div class="flex flex-col lg:flex-row gap-x-60  ">
-
-
-
-                    @include('frontend.template.notice')
-                    @include('frontend.template.news')
-
-                </div>
-
-
-            </div>
-
+          <!-- News -->
+    @include('frontend.template.news')
         </div>
+      </div>
 
-        @include('frontend.template.project')
+      <!-- Blue Container -->
+      <div class="absolute h-full w-1/2 top-0 left-0 bg-primary -z-10"></div>
 
-        @include('frontend.template.testimonial')
+      <!-- Light Gray Container -->
+      <div
+        class="absolute h-full w-1/2 top-0 left-1/2 bg-bgLightSecondary -z-10"
+      ></div>
+    </div>
 
+    <!-- Projects -->
+    @include('frontend.template.project')
 
+    <!-- Messages -->
+    @include('frontend.template.testimonial')
 
-    </main>
-
+    <!-- Footer -->
     @include('frontend.layouts.footer')
-    <!--/.c-footer-->
 
-
-
-
-
-    <script src="{{ asset('frontend-theme/js/manifest.js') }}"></script>
-    <script src="{{ asset('frontend-theme/js/vendor.js') }}"></script>
-    <script src="{{ asset('frontend-theme/js/scripts.js') }}"></script>
-
-</body>
-
+    @include('frontend.layouts.script')
+  </body>
 </html>

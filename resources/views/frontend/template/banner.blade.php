@@ -1,94 +1,143 @@
-        <div class="c-banner relative">
-            <div class="banner-image mySlides h-full ">
+<div>
+    <!-- Hero Section For Mobile -->
+    <div class="md:hidden">
+      <img
+        src="./resources/images/home/hands-together-mobile.png"
+        class="w-full"
+        alt="hands together"
+      />
+    </div>
 
-                <img src="{{ asset('frontend-theme/images/bg.png') }}" class="w-full h-full object-cover  " />
+    <!-- Hero Section For Tablet -->
+    <div class="hidden md:block lg:hidden">
+      <img
+        src="./resources/images/home/hands-together-tablet.png"
+        class="w-full"
+        alt="hands together"
+      />
+    </div>
 
-
-            </div>
-
-
-            <div class='o-container  px-16 h-full '>
-                <div class="lg:w-5/12 banner-content absolute top-0  h-full  ">
-                    <img src="{{ asset('frontend-theme/images/icon-curl-blue.svg') }}" class="pl-32" />
-                    <div class="banner-heading ">
-
-                        <h4 class="banner-title font-bold font-openSans text-xs leading-[12px] text-white pl-32  ">
-                            LOREM IPSUM DOLOR SIT AMET</h4>
-                        <h1 class=" font-playFair font-black text-3xl leading-[117%] mt-10 text-white pl-32">Lorem
-                            Ipsum is simply dummy text of the printing
-                        </h1>
-                    </div>
-                    <div class="banner-paragraph">
-
-                        <p class=" font-poppins font-normal text-sm leading-[150%] mt-20 text-white  pl-32">Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s,.</p>
-                    </div>
-                    <div class="pl-32 mt-10 ">
-                        <button class="banner-button bg-orange rounded-sm px-32 py-10 text-white flex items-center">
-                            <span class=' font-medium text-xs leading-[117.4%] mr-4'>Read More</span>
-                            <img src="{{ asset('frontend-theme/images/arrow.svg') }}" alt=" Your Steel Storage" />
-                        </button>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="scroller" id="scroller-btn">
-                        <img src="{{ asset('frontend-theme/images/arrow-down.svg') }}"
-                            class="bg-orange p-20 rounded-sm " />
-                    </div>
-                </div>
-
-
-            </div>
+    <!-- Common Hero Section Contents For Mobile And Tablet -->
+    <div class="space-y-2 md:space-y-3 p-4 md:py-6 md:px-10 lg:hidden">
+      <div>
+        <div>
+          <img
+            src="./resources/images/icons/zigzag-line.svg"
+            alt="hands together"
+          />
         </div>
-
-        <script>
-            var scroll = document.getElementById("scroller-btn")
-            scroll.addEventListener("click", function() {
-                window.scrollTo({
-                    top: window.innerHeight,
-                    behavior: "smooth"
-                })
-
-            })
-
-
-            let slideIndex = 1;
-            showSlides(slideIndex)
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-                console.log("Clicked", showSlides)
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides")
-                let dots = document.getElementsByClassName("dot")
-                if (n > slides.length) {
-                    slideIndex = 1
-                }
-                if (n < 1) {
-                    slideIndex = slideslength
-                }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace("active", "");
-                }
-                slides[slideIndex - 1].style.display = "block"
-                dots[slideIndex - 1].className += "active";
-
-
-            }
-        </script>
-
-        <div class="o-container px-16">
-
-            <div>
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
+        <div
+          class="text-xs text-textDark font-openSans font-700"
+          style="letter-spacing: 0.29em"
+        >
+          Astonishing Golf course
         </div>
+      </div>
+      <div
+        class="text-primary font-playFair font-700 text-xl"
+        style="letter-spacing: 0.035em"
+      >
+        A prodigious club bringing fabulous people together
+      </div>
+      <div class="text-textLight text-sm leading-6">
+        <span class="hidden md:inline"
+          >Rotary Club of Himalayan Golf Course is an amazing club that aims
+          to provide astonishing experience.</span
+        >
+        Rotary Club of Himalayan Golf Course is an amazing club that aims to
+        provide astonishing experience....
+      </div>
+      <div class="flex justify-end">
+        <a
+          href="about/about-our-club.html"
+          class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-6 py-3 text-sm text-white"
+        >
+          <div>Read More</div>
+          <div>
+            <img
+              src="./resources/images/icons/double-arrow.svg"
+              alt="double arrow"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Section For Laptop and Higher Resolution Devices -->
+    <div class="hidden lg:block relative hero-section">
+      <div class="bg-black bg-opacity-30 w-full h-full">
+        <div
+          class="relative max-w-7xl mx-auto h-full text-white grid place-items-center"
+        >
+          <div class="flex w-full px-10 xl:px-14 space-x-6">
+            <div class="space-y-6">
+              <div
+                class="bg-secondary h-24 w-0.75 rounded-t-full rounded-b-full"
+              ></div>
+              <div
+                class="bg-lightSecondary h-6 w-0.75 rounded-t-full rounded-b-full"
+              ></div>
+            </div>
+            <div class="space-y-2">
+              <div>
+                <div>
+                  <img
+                    src="./resources/images/icons/zigzag-line.svg"
+                    alt="zigzag line"
+                  />
+                </div>
+                <div
+                  class="text-xs font-openSans font-700"
+                  style="letter-spacing: 0.415em"
+                >
+                  Astonishing Golf course
+                </div>
+              </div>
+              <h1 class="text-3xl font-playFair font-900">
+                A prodigious club bringing <br />
+                fabulous people together
+              </h1>
+              <div class="">
+                Rotary Club of Himalayan Golf Course is an amazing <br />
+                club that aims to provide astonishing experience....
+              </div>
+              <div class="inline-block">
+                <a
+                  href="about/about-our-club.html"
+                  class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-6 py-3 text-sm text-white"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scroll Down Arrow -->
+          <a
+            id="scroll-arrow"
+            class="absolute bottom-0 right-0 translate-y-1/2 -translate-x-full bg-secondary w-16 h-16 flex items-center justify-center cursor-pointer"
+            href="#about"
+          >
+            <img
+              src="./resources/images/icons/arrow-down-large.svg"
+              alt="down arrow"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Small Icons For Laptop and Higher Resolutions Only -->
+      <div class="hidden lg:flex py-4 px-10 xl:px-14 max-w-7xl mx-auto space-x-2">
+        <div class="h-2 w-6 bg-secondary rounded-full"></div>
+        <div class="h-2 w-2 bg-bgLight rounded-full"></div>
+        <div class="h-2 w-2 bg-bgLight rounded-full"></div>
+        <div class="h-2 w-2 bg-bgLight rounded-full"></div>
+      </div>
