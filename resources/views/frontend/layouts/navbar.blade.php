@@ -5,7 +5,7 @@
     >
       <div class="cursor-pointer" onclick="toggleSidebar(true)">
         <img
-          src="./resources/images/icons/hamburger-menu.svg"
+          src="{{asset('resources/images/icons/hamburger-menu.svg')}}"
           class=""
           alt="hamburger menu"
         />
@@ -15,19 +15,19 @@
         class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <img
-          src="./resources/images/rotary-logo.png"
+          src="{{asset('resources/images/rotary-logo.png')}}"
           alt="Rotary Club"
           class="w-full main-nav-logo"
         />
       </a>
       <div>
         <img
-          src="./resources/images/home/serve-to-change-lives1.png"
+          src="{{asset('resources/images/home/serve-to-change-lives1.png')}}"
           alt="Serve to change lives"
           class="hidden md:inline-block serve-to-change-lives"
         />
         <img
-          src="./resources/images/home/serve-to-change-lives.png"
+          src="{{asset('resources/images/home/serve-to-change-lives.png')}}"
           alt="Serve to change lives"
           class="md:hidden"
         />
@@ -50,14 +50,14 @@
           <div>
             <img
               class="w-4 h-4 cursor-pointer"
-              src="./resources/images/icons/close.svg"
+              src="{{asset('resources/images/icons/close.svg')}}"
               alt="close icon"
               onclick="toggleSidebar()"
             />
           </div>
           <a class="block" href="index.html">
             <img
-              src="./resources/images/rotary-logo.png"
+              src="{{asset('resources/images/rotary-logo.png')}}"
               alt="Rotary Club"
               class="main-nav-logo"
             />
@@ -74,7 +74,7 @@
             >
               <div>
                 <img
-                  src="./resources/images/icons/navigation/home.svg"
+                  src="{{asset('resources/images/icons/navigation/home.svg')}}"
                   class="w-5 h-5"
                   alt="home icon"
                 />
@@ -92,7 +92,7 @@
               <div class="flex items-center space-x-4">
                 <div>
                   <img
-                    src="./resources/images/icons/navigation/about.svg"
+                    src="{{asset('resources/images/icons/navigation/about.svg')}}"
                     class="w-5 h-5"
                     alt="about icon"
                   />
@@ -101,7 +101,7 @@
               </div>
               <div>
                 <img
-                  src="./resources/images/icons/arrow-down.svg"
+                  src="{{asset('resources/images/icons/arrow-down.svg')}}"
                   class="w-4 arrow transition-all duration-300"
                   style="transform: rotate(0deg)"
                   alt="down arrow"
@@ -131,7 +131,7 @@
               <div class="flex items-center space-x-4">
                 <div>
                   <img
-                    src="./resources/images/icons/navigation/projects.svg"
+                    src="{{asset('resources/images/icons/navigation/projects.svg')}}"
                     class="w-5 h-5"
                     alt="projects icon"
                   />
@@ -140,7 +140,7 @@
               </div>
               <div>
                 <img
-                  src="./resources/images/icons/arrow-down.svg"
+                  src="{{asset('resources/images/icons/arrow-down.svg')}}"
                   class="w-4 arrow transition-all duration-300"
                   style="transform: rotate(0deg)"
                   alt="down arrow"
@@ -177,7 +177,7 @@
               <div class="flex items-center space-x-4">
                 <div>
                   <img
-                    src="./resources/images/icons/navigation/photos.svg"
+                    src="{{asset('resources/images/icons/navigation/photos.svg')}}"
                     class="w-5 h-5"
                     alt="photos icon"
                   />
@@ -186,7 +186,7 @@
               </div>
               <div>
                 <img
-                  src="./resources/images/icons/arrow-down.svg"
+                  src="{{asset('resources/images/icons/arrow-down.svg')}}"
                   class="w-4 arrow transition-all duration-300"
                   style="transform: rotate(0deg)"
                   alt="down arrow"
@@ -215,7 +215,7 @@
             >
               <div>
                 <img
-                  src="./resources/images/icons/navigation/blog.svg"
+                  src="{{asset('resources/images/icons/navigation/blog.svg')}}"
                   class="w-5 h-5"
                   alt="blog icon"
                 />
@@ -232,7 +232,7 @@
             >
               <div>
                 <img
-                  src="./resources/images/icons/navigation/member.svg"
+                  src="{{asset('resources/images/icons/navigation/member.svg')}}"
                   class="w-5 h-5"
                   alt="member icon"
                 />
@@ -249,7 +249,7 @@
             >
               <div>
                 <img
-                  src="./resources/images/icons/navigation/contact.svg"
+                  src="{{asset('resources/images/icons/navigation/contact.svg')}}"
                   class="w-5 h-5"
                   alt="contact icon"
                 />
@@ -279,14 +279,14 @@
               <a href="index.html" class="flex-shrink-0 flex">
                 <div class="flex-shrink-0">
                   <img
-                    src="./resources/images/company-name.png"
+                    src="{{asset('resources/images/company-name.png')}}"
                     alt="Rotary Club"
                     style="width: 83px; height: 53px"
                   />
                 </div>
                 <div class="px-2 border-r-2 mr-2 border-gray-200">
                   <img
-                    src="./resources/images/rotary-logo.png"
+                    src="{{asset('resources/images/rotary-logo.png')}}"
                     alt="Rotary Club"
                     class="main-nav-logo"
                   />
@@ -307,7 +307,7 @@
           </div>
           <div>
             <img
-              src="./resources/images/home/serve-to-change-lives1.png"
+              src="{{asset('resources/images/home/serve-to-change-lives1.png')}}"
               alt="Serve To Change Lives"
             />
           </div>
@@ -329,7 +329,7 @@
             >
               <div>
                 <img
-                  src="./resources/images/icons/globe.svg"
+                  src="{{asset('resources/images/icons/globe.svg')}}"
                   alt="globe icon"
                 />
               </div>
@@ -340,7 +340,7 @@
               class="w-20 flex justify-center items-center h-full"
             >
               <img
-                src="./resources/images/icons/navigation/home-1.svg"
+                src="{{asset('resources/images/icons/navigation/home-1.svg')}}"
                 class="cursor-pointer"
                 style="width: 20.63px; height: 17.87px"
                 alt="home icon"
@@ -363,7 +363,7 @@
                     <div class="font-600">ABOUT</div>
                     <div class="ml-2">
                       <img
-                        src="./resources/images/icons/arrow-down-white.svg"
+                        src="{{asset('resources/images/icons/arrow-down-white.svg')}}"
                         class="w-3 group-hover:rotate-180"
                         alt="down arrow"
                       />
@@ -377,23 +377,24 @@
                 style="padding: 27px"
               >
                 <a
-                  href="about/about-our-club.html"
+                  href="{{route('about-our-club')}}"
                   class="cursor-pointer block"
                   >About Our Club</a
                 >
                 <a
-                  href="about/board-members.html"
+                  href="{{route('members','board-members')}}"
                   class="cursor-pointer block"
                   style="margin: 14px 0"
                 >
                   Our Board
                 </a>
-                <a href="about/members.html" class="cursor-pointer block"
+                <a                   href="{{route('members')}}"
+                class="cursor-pointer block"
                   >Our Members</a
                 >
                 <a
-                  href="about/charter-members.html"
-                  class="truncate cursor-pointer block"
+                href="{{route('charterMember')}}"
+                class="truncate cursor-pointer block"
                   style="margin-top: 14px"
                 >
                   Charter Members
@@ -409,7 +410,7 @@
                     <div class="font-600">OUR PROJECTS</div>
                     <div class="ml-2">
                       <img
-                        src="./resources/images/icons/arrow-down-white.svg"
+                        src="{{asset('resources/images/icons/arrow-down-white.svg')}}"
                         class="w-3 group-hover:rotate-180"
                         alt="down arrow"
                       />
@@ -423,36 +424,35 @@
                 style="padding: 27px"
               >
                 <a
-                  href="projects/individual-project.html"
+                  href="{{ route('singleProject',"abc") }}"
                   class="cursor-pointer block"
                   >Global Grants</a
                 >
                 <a
-                  href="projects/individual-project.html"
-                  class="cursor-pointer block"
+                href="{{ route('singleProject',"abc") }}"
+                class="cursor-pointer block"
                   style="margin: 14px 0"
                 >
                   Community Projects
                 </a>
                 <a
-                  href="projects/individual-project.html"
-                  class="truncate cursor-pointer block"
+                href="{{ route('singleProject',"abc") }}"
+                class="truncate cursor-pointer block"
                 >
                   Earthquake Relief Resistance
                 </a>
                 <a
-                  href="projects/individual-project.html"
-                  class="cursor-pointer block"
+                href="{{ route('singleProject',"abc") }}"
+                                  class="cursor-pointer block"
                   style="margin: 14px 0"
                 >
                   Looking For Funding
                 </a>
                 <a
-                  href="projects/all-projects.html"
+                  href="{{route('allProject')}}"
                   class="cursor-pointer block"
                   style="margin-top: 14px 0"
-                  >View All Projects</a
-                >
+                  >View All Projects</a>
               </div>
             </div>
 
@@ -464,7 +464,7 @@
                     <div class="font-600">PHOTOS</div>
                     <div class="ml-2">
                       <img
-                        src="./resources/images/icons/arrow-down-white.svg"
+                        src="{{asset('resources/images/icons/arrow-down-white.svg')}}"
                         class="w-3 group-hover:rotate-180"
                         alt="down arrow"
                       />

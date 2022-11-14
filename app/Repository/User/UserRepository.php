@@ -12,7 +12,6 @@ class UserRepository extends BaseRepository
     {
         $this->model = $user;
     }
-
     public function store($data)
     {
         if (file($data["image"])) {

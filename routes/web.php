@@ -1,7 +1,9 @@
 
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryFolderController;
 use App\Http\Controllers\MailController;
@@ -14,12 +16,13 @@ use App\Http\Controllers\ProjectTypeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SummerNoteController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('frontend.layouts.master');
+    return view('frontend.pages.home');
 });
 
 
@@ -63,6 +66,9 @@ Route::group(["middleware" => ["auth", "admin"]], function () {
     Route::resource("/project-type", ProjectTypeController::class);
     Route::resource("/project", ProjectController::class);
     Route::resource("/setting", SiteSettingController::class);
+    Route::resource("/aboutUs", AboutUsController::class);
+    Route::post("/delete_Selected_aboutUs", [AboutUsController::class, "deleteSelected"])->name("delete_Selected_aboutUs");
+    Route::post('/editor-upload', [SummerNoteController::class, "store"])->name("editor-upload");
 });
 
 // FrontEnd Routes
@@ -72,5 +78,10 @@ Route::group(
         Route::get("/dashboard", [MemberController::class, "dashboard"])->name("memberDashboard");
     }
 );
+Route::get('/about-our-club',[FrontEndController::class, 'aboutUs'])->name('about-our-club');
+Route::get('/members/{slug?}',[FrontEndController::class, 'members'])->name('members');
+Route::get('/charter-members',[FrontEndController::class, 'charterMembers'])->name('charterMember');
+Route::get('/projects/{slug}',[FrontEndController::class, 'singleProject'])->name('singleProject');
+Route::get('/projects',[FrontEndController::class, 'allProject'])->name('allProject');
 
 require __DIR__ . '/auth.php';
