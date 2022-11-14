@@ -17,6 +17,11 @@ class MailRepository extends BaseRepository
 
         $sentTo = array_unique($data["sent_to"]);
         $data["sent_to"] = $sentTo;
+        if (isset($data["files"])) {
+            $img = rand() . '.' . $data['files']->getClientOriginalName();
+            $data['files']->move(public_path("files"), $img);
+            $data['files'] = $img;
+        }
         Mail::create($data);
         dispatch(new SendEmailJob($data));
     }
