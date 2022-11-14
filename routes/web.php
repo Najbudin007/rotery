@@ -64,10 +64,13 @@ Route::group(["middleware" => ["auth", "admin"]], function () {
     Route::resource("/project", ProjectController::class);
     Route::resource("/setting", SiteSettingController::class);
 });
+
+// FrontEnd Routes
 Route::group(
     ["middleware" => ["auth", "member"], "prefix" => "member"],
     function () {
         Route::get("/dashboard", [MemberController::class, "dashboard"])->name("memberDashboard");
     }
 );
+
 require __DIR__ . '/auth.php';

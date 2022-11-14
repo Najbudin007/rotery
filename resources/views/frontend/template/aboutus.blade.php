@@ -12,19 +12,16 @@
           </div>
           <div
             class="text-secondary text-xxs md:text-xs"
-            style="letter-spacing: 0.29em"
-          >
+            style="letter-spacing: 0.29em">
             WHO WE ARE?
           </div>
           <div
-            class="text-primary text-lg md:text-2xl font-playFair font-700 tracking-header"
-          >
+            class="text-primary text-lg md:text-2xl font-playFair font-700 tracking-header">
             ABOUT US
           </div>
         </div>
         <div
-          class="text-textLight text-sm text-justify leading-7 tracking-header"
-        >
+          class="text-textLight text-sm text-justify leading-7 tracking-header">
           Rotary Club of Himalayan Golf Course of the printing and typesetting
           industry. The club has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -34,14 +31,12 @@
         <div class="flex md:justify-end lg:justify-start pt-3">
           <a
             href="about/about-our-club.html"
-            class="flex items-center space-x-2 cursor-pointer bg-primary overflow-hidden rounded px-[14px] py-[11px] lg:py-[15px] lg:px-[34px] text-xs lg:text-sm text-white"
-          >
+            class="flex items-center space-x-2 cursor-pointer bg-primary overflow-hidden rounded px-[14px] py-[11px] lg:py-[15px] lg:px-[34px] text-xs lg:text-sm text-white">
             <div>Read more</div>
             <div>
               <img
                 src="./resources/images/icons/double-arrow.svg"
-                alt="double arrow"
-              />
+                alt="double arrow"/>
             </div>
           </a>
         </div>

@@ -1,8 +1,10 @@
+<?php  $banner = App\Models\Slider::first(); ?>
 <div>
     <!-- Hero Section For Mobile -->
     <div class="md:hidden">
       <img
         src="./resources/images/home/hands-together-mobile.png"
+        {{-- {{ asset('images/' . $banner->image) }} --}}
         class="w-full"
         alt="hands together"
       />
@@ -30,7 +32,7 @@
           class="text-xs text-textDark font-openSans font-700"
           style="letter-spacing: 0.29em"
         >
-          Astonishing Golf course
+         {{$banner->title}}
         </div>
       </div>
       <div
@@ -90,11 +92,11 @@
                   class="text-xs font-openSans font-700"
                   style="letter-spacing: 0.415em"
                 >
-                  Astonishing Golf course
+                 {{$banner->title}}
                 </div>
               </div>
               <h1 class="text-3xl font-playFair font-900">
-                A prodigious club bringing <br />
+                A prodigious club bringing 
                 fabulous people together
               </h1>
               <div class="">

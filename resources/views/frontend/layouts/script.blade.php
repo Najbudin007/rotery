@@ -1,5 +1,5 @@
-<script src="./resources/js/main.js"></script>
-<script src="./resources/js/slider.js"></script>
+<script src="{{asset('./resources/js/main.js')}}"></script>
+<script src="{{asset('./resources/js/slider.js')}}"></script>
 
 <script>
   window.addEventListener("scroll", function () {
