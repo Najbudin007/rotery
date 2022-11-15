@@ -29,6 +29,7 @@ class NewsRepository extends BaseRepository
         $data['slug'] = Str::slug($data['title']);
         return $this->model->create($data);
     }
+    
     public function update($news, $data)
     {
         if (isset($data["image"])) {
@@ -42,11 +43,12 @@ class NewsRepository extends BaseRepository
             foreach ($data["files"] as $key => $file) {
                 $d[$key] = save_document($file);
             }
-            $data["files"] =  array_merge($news["files"], $d);
+            $data["files"] = array_merge($news["files"], $d);
         }
         $data['slug'] = Str::slug($data['title']);
         $this->model->find($news->id)->update($data);
     }
+
     public function deleteFile($id)
     {
         $news = $this->model->find($id);

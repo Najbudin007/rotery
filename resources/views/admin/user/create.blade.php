@@ -31,6 +31,7 @@
                                     </div>
                                 @enderror
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Address</label>
                                 <input type="text" class="form-control" placeholder="Enter Address" name="address"
@@ -41,6 +42,18 @@
                                     </div>
                                 @enderror
                             </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Designation</label>
+                                <input type="text" class="form-control" placeholder="Enter Designation" name="designation"
+                                    value="{{ $role->designation ?? '' }}" required>
+                                @error('designation')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">

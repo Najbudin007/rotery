@@ -1,85 +1,385 @@
-  <div class="mt-80">
-
-      <div class="o-container px-16 flex flex-col justify-between">
+<div class="bg-bgLightSecondary">
+    <div class="max-w-7xl mx-auto py-6 md:py-10 lg:py-16" style="flex: 2">
+      <div class="relative space-y-4 lg:space-y-7">
+        <div class="px-4 md:px-10 xl:px-14">
           <div>
-              <img src="{{ asset('frontend-theme/images/icon-curl-yellow.svg') }}">
+            <div>
+              <img
+                src="./resources/images/icons/zigzag-line-yellow.svg"
+                alt="zigzag line"
+              />
+            </div>
+            <div
+              class="text-xxs text-secondary"
+              style="letter-spacing: 0.29em"
+            >
+              WHAT THEY HAVE TO SAY?
+            </div>
+          </div>
+          <div
+            class="text-lg text-primary font-playFair font-700 md:text-2xl"
+          >
+            Message for 2021-2022
+          </div>
+        </div>
 
-              <span class="font-regular text-xs leading-[140%] text-orange uppercase">
-                  What they have to say?</span>
+        <div
+          class="message-swiper overflow-hidden relative px-4 md:mx-6 lg:px-4 xl:mx-10"
+        >
+          <!-- All Message Cards Slider and Swiper -->
+          <div class="swiper-wrapper">
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <h1 class="font-bold font-playFair text-blue-100 text-2xl leading-[140%]">Messages for 2021 - 2022
-              </h1>
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="ooard member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invididual Message Card -->
+            <div
+              class="bg-white space-y-3 message-card rounded-xl swiper-slide"
+            >
+              <div>
+                <img
+                  src="./resources/images/about/board-members/board-member-2.png"
+                  alt="board member"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="lg:py-3 space-y-3">
+                <div
+                  class="text-sm text-primary border-l border-secondary px-4"
+                  style="border-left-width: 3px"
+                >
+                  <div class="font-600 text-sm lg:text-lg">
+                    Sujan Maharjan
+                  </div>
+                  <div class="font-500 text-xs lg:text-base">
+                    ABCD President
+                  </div>
+                </div>
+                <div
+                  class="text-xs lg:text-sm text-textDarkSecondary px-4"
+                  style="line-height: 24px"
+                >
+                  Rotary Club of Himalayan Golf course is the best golf course
+                  in Nepal...
+                </div>
+                <div
+                  class="px-4 pb-3 flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
+                >
+                  <div>Read More</div>
+                  <div>
+                    <img
+                      src="./resources/images/icons/double-arrow-yellow.svg"
+                      alt="double arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-          <div class="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-x-32 mt-28">
-              <div class="flex flex-col mt-32 lg:mt-0">
-
-                  <img src="{{ asset('frontend-theme/images/user1.png') }}" class="rounded-md" />
-                  <div class="px-20 ">
-                      <h2 class="font-semiBold text-blue-100 text-lg leading-[140%] mt-24">Sujan Maharjan</h2>
-                      <h3 class="font-medium text-blue-100 text-sm leading-[140%]">ABCD President</h3>
-                      <p class="font-regular text-sm text-gray-150 leading-[172%] mt-24">Lorem Ipsum is simply
-                          dummy text of the printing and typesetting industry...</p>
-                      <button class=" rounded-sm  text-blue-100 mt-10 flex items-center">
-                          <span class=' font-medium text-xs leading-[117.4%] mr-4'>Read more</span>
-                          <img src="{{ asset('frontend-theme/images/arrow-orange.svg') }}" alt=" Your Steel Storage" />
-                      </button>
-                  </div>
-
-              </div>
-
-              <div class="flex flex-col mt-32  lg:mt-0">
-
-                  <img src="{{ asset('frontend-theme/images/user1.png') }}" class="rounded-md" />
-                  <div class="px-20">
-                      <h2 class="font-semiBold text-blue-100 text-lg leading-[140%] mt-24">Sujan Maharjan</h2>
-                      <h3 class="font-medium text-blue-100 text-sm leading-[140%]">ABCD President</h3>
-                      <p class="font-regular text-sm text-gray-150 leading-[172%] mt-24">Lorem Ipsum is simply
-                          dummy text of the printing and typesetting industry...</p>
-                      <button class=" rounded-sm  text-blue-100 mt-10 flex items-center">
-                          <span class=' font-medium text-xs leading-[117.4%] mr-4'>Read more</span>
-                          <img src="{{ asset('frontend-theme/images/arrow-orange.svg') }}" alt=" Your Steel Storage" />
-                      </button>
-                  </div>
-
-              </div>
-
-              <div class="flex flex-col mt-32 lg:mt-0">
-
-                  <img src="{{ asset('frontend-theme/images/user1.png') }}" class="rounded-md" />
-
-                  <div class="px-20">
-                      <h2 class="font-semiBold text-blue-100 text-lg leading-[140%] mt-24">Sujan Maharjan</h2>
-                      <h3 class="font-medium text-blue-100 text-sm leading-[140%]">ABCD President</h3>
-                      <p class="font-regular text-sm text-gray-150 leading-[172%] mt-24">Lorem Ipsum is simply
-                          dummy text of the printing and typesetting industry...</p>
-                      <button class=" rounded-sm  text-blue-100 mt-10 flex items-center ">
-                          <span class=' font-medium text-xs leading-[117.4%] mr-4'>Read more</span>
-                          <img src="{{ asset('frontend-theme/images/arrow-orange.svg') }}" alt=" Your Steel Storage" />
-                      </button>
-                  </div>
-
-              </div>
-
-              <div class="flex flex-col mt-32 lg:mt-0">
-
-                  <img src="{{ asset('frontend-theme/images/user1.png') }}" class="rounded-md" />
-                  <div class="px-20">
-                      <h2 class="font-semiBold text-blue-100 text-lg leading-[140%] mt-24">Sujan Maharjan</h2>
-                      <h3 class="font-medium text-blue-100 text-sm leading-[140%]">ABCD President</h3>
-                      <p class="font-regular text-sm text-gray-150 leading-[172%] mt-24">Lorem Ipsum is simply
-                          dummy text of the printing and typesetting industry...</p>
-                      <button class=" rounded-sm  text-blue-100 mt-10 flex items-center">
-                          <span class=' font-medium text-xs leading-[117.4%] mr-4'>Read more</span>
-                          <img src="{{ asset('frontend-theme/images/arrow-orange.svg') }}" alt=" Your Steel Storage" />
-                      </button>
-                  </div>
-
-              </div>
-
+          <!-- Left And Right Arrows For Message Slider -->
+          <div class="hidden lg:block">
+            <div
+              class="swiper-button-prev w-0 h-0 overflow-hidden"
+              id="message-slider-prev"
+            ></div>
+            <div
+              class="swiper-button-next w-0 h-0 overflow-hidden"
+              id="message-slider-next"
+            ></div>
           </div>
+
+          <!-- Custom Arrows For Slider -->
+          <div
+            class="absolute top-1/2 left-0 -translate-y-[28px] xl:-translate-y-[4px] -mb-10 hidden lg:flex w-full h-0 justify-between items-center"
+            style="z-index: 11"
+          >
+            <div
+              class="shadow-md overflow-hidden bg-white border border-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer bg-opacity-30 hover:bg-opacity-40 transition-all duration-300"
+              onclick="document.getElementById('message-slider-prev').click()"
+            >
+              <img
+                src="./resources/images/icons/left-arrow.svg"
+                class="w-5 h-5"
+                alt="left arrow"
+              />
+            </div>
+            <div
+              class="overflow-hidden bg-white border border-white w-16 h-16 rounded-full flex items-center justify-center cursor-pointer bg-opacity-30 hover:bg-opacity-40 transition-all duration-300 rotate-180"
+              onclick="document.getElementById('message-slider-next').click()"
+              style="
+                box-shadow: 0px -4px 6px -1px rgb(0 0 0 / 0.1),
+                  0 2px 4px -2px rgb(0 0 0 / 0.1);
+              "
+            >
+              <img
+                src="./resources/images/icons/left-arrow.svg"
+                class="w-5 h-5"
+                alt="left arrow"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
+    </div>
   </div>

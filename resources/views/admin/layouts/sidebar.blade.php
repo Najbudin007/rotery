@@ -139,11 +139,30 @@
                           </p>
                       </a>
                   </li>
+
+                  <li class="nav-item">
+                      <a href="{{ route('aboutUs.index') }}" class="nav-link">
+                          <i class="nav-icon fas fa-info-circle"></i>
+                          <p>
+                              AboutUs
+                          </p>
+                      </a>
+                  </li>
+
                   <li class="nav-item">
                       <a href="{{ route('mail.index') }}" class="nav-link">
                           <i class="nav-icon fas fa-envelope"></i>
                           <p>
                               Mails
+                          </p>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="{{ route('setting.create') }}" class="nav-link">
+                          <i class="nav-icon fas fa-cog"></i>
+                          <p>
+                              Site Setting
                           </p>
                       </a>
                   </li>

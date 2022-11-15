@@ -1,46 +1,107 @@
-   <section class="mt-112">
-       <div class="o-container px-16">
+<div id="about" class="max-w-7xl mx-auto relative">
+    <div
+      class="flex flex-col-reverse lg:flex-row lg:items-center lg:space-x-10 px-4 md:px-10 xl:px-14 py-6 lg:py-10"
+    >
+      <div class="space-y-3 md:space-y-5">
+        <div>
+          <div>
+            <img
+              src="./resources/images/icons/zigzag-line-yellow.svg"
+              alt="zigzag line"
+            />
+          </div>
+          <div
+            class="text-secondary text-xxs md:text-xs"
+            style="letter-spacing: 0.29em">
+            WHO WE ARE?
+          </div>
+          <div
+            class="text-primary text-lg md:text-2xl font-playFair font-700 tracking-header">
+            ABOUT US
+          </div>
+        </div>
+        <div
+          class="text-textLight text-sm text-justify leading-7 tracking-header">
+          Rotary Club of Himalayan Golf Course of the printing and typesetting
+          industry. The club has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting.
+        </div>
+        <div class="flex md:justify-end lg:justify-start pt-3">
+          <a
+            href="about/about-our-club.html"
+            class="flex items-center space-x-2 cursor-pointer bg-primary overflow-hidden rounded px-[14px] py-[11px] lg:py-[15px] lg:px-[34px] text-xs lg:text-sm text-white">
+            <div>Read more</div>
+            <div>
+              <img
+                src="./resources/images/icons/double-arrow.svg"
+                alt="double arrow"/>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="mb-8 home-about lg:flex-shrink-0">
+        <div class="image relative w-full p-4 md:p-6 lg:p-4">
+          <div class="childrens">
+            <img
+              src="./resources/images/home/childrens-mobile.png"
+              class="md:hidden"
+              alt="childrens"
+            />
+            <img
+              src="./resources/images/home/childrens-tablet.png"
+              class="hidden md:inline-block lg:hidden"
+              alt="childrens"
+            />
+            <img
+              src="./resources/images/home/childrens-laptop.png"
+              class="hidden lg:inline-block"
+              alt="childrens"
+            />
+          </div>
 
-           <div class="flex flex-col-reverse justify-center items-center sm:items-center sm:justify-between sm:flex-row">
-               <div class="about-content sm:w-6/12 mt-20 sm:mt-0  ">
-                   <img class=" mx-auto sm:mx-0 " src="{{ asset('frontend-theme/images/icon-curl-yellow.svg') }}">
-                   <h5
-                       class="about-heading font-normal text-xs leading-16 text-orange uppercase text-center sm:text-left">
-                       Who we are?</h5>
-                   <h1
-                       class=" text-blue-100 font-playFair font-bold text-2xl leading-32 uppercase text-center sm:text-left ">
-                       About Us</h1>
+          <div class="line">
+            <img
+              src="./resources/images/home/vertical-line.png"
+              alt="vertical line"
+              class="absolute top-0 left-0 h-32 w-0.75 md:h-64 md:w-1.5 lg:h-44 lg:w-0.75"
+            />
+            <img
+              src="./resources/images/home/horizontal-line.png"
+              alt="horizontal line"
+              class="absolute top-0 left-0 w-32 h-0.75 md:w-64 md:h-1.5 lg:w-44 lg:h-0.75"
+            />
+            <img
+              src="./resources/images/home/vertical-line.png"
+              alt="vertical line"
+              class="absolute bottom-0 right-0 h-32 w-0.75 md:h-64 md:w-1.5 lg:h-44 lg:w-0.75"
+            />
+            <img
+              src="./resources/images/home/horizontal-line.png"
+              alt="horizontal line"
+              class="absolute bottom-0 right-0 w-32 h-0.75 md:w-64 md:h-1.5 lg:w-44 lg:h-0.75"
+            />
+          </div>
+        </div>
+      </div>
 
-                   <p
-                       class="about-paragraph text-gray-100 font-normal text-sm leading-normal mt-20 text-center sm:text-left">
-                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                       been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                       galley of type and scrambled it to make a type specimen book. It has survived not only five
-                       centuries, but also the leap into electronic typesetting.</p>
+      <!-- Background Vectors For Laptop and Larger Resolutions -->
+      <div
+        class="hidden lg:block absolute top-24 left-0 -z-10"
+        style="transform: translateX(-90px)"
+      >
+        <img
+          src="./resources/images/home/vector.svg"
+          alt="background vector"
+        />
+      </div>
 
-                   </p>
-
-
-                   <button
-                       class="banner-button mx-auto sm:mx-0 bg-blue-100 px-32 rounded-xs py-10 mt-56 text-white flex items-center justify-center">
-
-
-                       <span class=' font-medium text-xs leading-[117.4%]  mr-4'>Read More</span>
-                       <img src="{{ asset('frontend-theme/images/arrow.svg') }}" alt=" Your Steel Storage" />
-                   </button>
-               </div>
-
-
-               <div class="sm:w-5/12 relative ">
-                   <img src="{{ asset('frontend-theme/images/border-top.svg') }}" class="absolute -top-10 left-0" />
-                   <img src="{{ asset('frontend-theme/images/children.png') }}"
-                       class="w-full px-12 rounded-bl-lg rounded-tr-lg py-12 h-144" />
-                   <img src="{{ asset('frontend-theme/images/border-bottom.svg') }}"
-                       class="absolute bottom-0 right-0" />
-
-               </div>
-           </div>
-
-
-       </div>
-   </section>
+      <div class="hidden lg:block absolute bottom-0 translate-y-1/2 -z-10">
+        <img
+          src="./resources/images/home/vector-1.svg"
+          alt="background vector"
+        />
+      </div>
+    </div>
+  </div>

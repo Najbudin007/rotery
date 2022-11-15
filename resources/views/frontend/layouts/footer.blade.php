@@ -1,93 +1,129 @@
-  <footer class="c-footer ">
-      <div class="o-container px-16 mt-96 ">
-          <div class="flex flex-col justify-center items-center">
-              <img src="{{ asset('frontend-theme/images/rotary.png') }}" />
-              <div class="mt-40 sm:hidden">
-                  <p class=" font-normal text-sm leading-[171%]">Rotary Club of Himalayan Gulf Course</p>
-                  <p class="font-normal text-sm leading-[171%]">District:
-                      <span class="font-semiBold text-sm leading-[171%] text-blue-100">
-                          1010</span>, Club Number:
-                      <span class="font-semiBold text-sm leading-[171%] text-blue-100">
-                          123456</span>
-                  </p>
-              </div>
-
-              <div class="mt-32 ">
-
-
-                  <ul
-                      class="font-normal flex flex-col sm:flex-row text-center sm:text-left my-10 sm:my-0 marker:text-orange list-none text-sm leading-[171%] ">
-
-
-                      About Rotary
-
-                      <li class="my-10 sm:my-0 mx-auto sm:mr-0 sm:ml-10 flex"><img
-                              src="{{ asset('frontend-theme/images/list.svg') }}" class="mr-6" />Get Involved
-                      </li>
-                      <li class="my-10 sm:my-0 mx-auto sm:mr-0 sm:ml-10 flex"><img
-                              src="{{ asset('frontend-theme/images/list.svg') }}" class="mr-6" />Our Causes</li>
-
-                      </li>
-
-                      <li class=" my-10 sm:my-0 mx-auto sm:mr-0 sm:ml-10 flex"><img
-                              src="{{ asset('frontend-theme/images/list.svg') }}" class="mr-6" />Our Programs
-                      </li>
-
-
-                      <li class=" my-10 sm:my-0 mx-auto sm:mr-0 sm:ml-10 flex"><img
-                              src="{{ asset('frontend-theme/images/list.svg') }}" class="mr-6" />News</li>
-
-
-                      <li class=" my-10 sm:my-0 mx-auto sm:mr-0 sm:ml-10 flex"><img
-                              src="{{ asset('frontend-theme/images/list.svg') }}" class="mr-6" />For Members</li>
-
-
-                  </ul>
-              </div>
-
-              <div class="mt-24">
-                  <a href="/home.html" class="flex items-center py-12 px-16 bg-orange rounded-xs text-white  ">
-                      <button class="c-btn-orange uppercase flex items-center justify-center">
-                          <img src="{{ asset('frontend-theme/images/earth.svg') }}" alt=" Your Steel Storage" />
-
-                          <span class='ml-6 font-semibold font-openSans text-xs leading-[117.4%]'>District
-                              website</span>
-                      </button>
-                  </a>
-
-              </div>
-              <div class=" w-4/12 border-t border-b border-gray-100 mt-32">
-                  <div class="flex justify-center pt-32">
-
-                      <img class="" src="{{ asset('frontend-theme/images/icons/icon-facebook.svg') }}" />
-                      <img class="mx-40" src="{{ asset('frontend-theme/images/icons/icon-linkedin.svg') }}" />
-
-                      <img class="" src="{{ asset('frontend-theme/images/icons/icon-youtube.svg') }}" />
-
-
-                  </div>
-
-                  <div class="mt-40 pb-56 flex justify-center">
-                      <img src="{{ asset('frontend-theme/images/icons/icon-copyright.svg') }}" />
-                      <p class="ml-6 font-normal text-sm text-gray-200 leading-[171%]">Copyright 2022. All Rights
-                          Reserved</p>
-
-                  </div>
-              </div>
-
-              <div class="my-12 flex">
-                  <p class=" font-normal text-xs text-gray-200 leading-[171%] flex">Crafted by &nbsp;
-                      <span class="font-semiBold text-xs leading-[171%] text-orange">Prabidhilabs
-
-                      </span>
-                      <img src="{{ asset('frontend-theme/images/icons/icon-copyright.svg') }}" class="mx-6" />
-                      2022
-
-
-                  </p>
-
-
-              </div>
-
+<div class="max-w-7xl mx-auto">
+    <div>
+      <div class="flex flex-col items-center py-6 space-y-6">
+        <a href="index.html" class="flex items-center">
+          <div class="flex-shrink-0">
+            <img
+              src="./resources/images/company-name.png"
+              alt="Rotary Club"
+              style="width: 83px; height: 53px"
+            />
           </div>
-  </footer>
+          <div class="px-2 border-r-2 mr-2 border-gray-200">
+            <img
+              src="./resources/images/rotary-logo.png"
+              alt="Rotary Club"
+              class="w-[59px] h-[59px] md:w-[90px] md:h-[90px] lg:w-[56px] lg:h-[56px]"
+            />
+          </div>
+          <div class="text-sm text-primary font-hind font-700">
+            Club of <br />
+            Himalayan <br />
+            Golfers
+          </div>
+        </a>
+
+        <div
+          class="w-36 ml-8 md:ml-0 md:w-auto flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-2 text-sm text-textDarkSecondary"
+        >
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full md:hidden"></div>
+            <div>
+              <a href="about/about-our-club.html" class="hover:underline"
+                >About Rotary</a
+              >
+            </div>
+          </div>
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+            <div>
+              <a href="contact-us.html" class="hover:underline"
+                >Get Involved</a
+              >
+            </div>
+          </div>
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+            <div>
+              <a href="#" class="hover:underline">Our Classes</a>
+            </div>
+          </div>
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+            <div>
+              <a href="#" class="hover:underline">Our Programs</a>
+            </div>
+          </div>
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+            <div>
+              <a href="news/index.html" class="hover:underline">News</a>
+            </div>
+          </div>
+          <div class="flex space-x-2 items-center w-full md:w-auto">
+            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+            <div>
+              <a href="membership.html" class="hover:underline"
+                >For Members</a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-4 py-3 text-xxs text-white font-600"
+          >
+            <div>
+              <img
+                src="./resources/images/icons/globe.svg"
+                alt="globe icon"
+              />
+            </div>
+            <div>DISTRICT WEBSITE</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-b mx-auto w-full lg:w-90"></div>
+      <div class="py-6 px-4 space-y-6 border-b lg:border-none">
+        <div class="flex justify-center space-x-8">
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="./resources/images/icons/facebook.png"
+              alt="facebook icon"
+              class="cursor-pointer"
+            />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img
+              src="./resources/images/icons/linkedin.png"
+              alt="linkedin icon"
+              class="cursor-pointer"
+            />
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <img
+              src="./resources/images/icons/youtube.png"
+              alt="youtube icon"
+              class="cursor-pointer"
+            />
+          </a>
+        </div>
+        <div class="text-textLightSecondary text-xs text-center">
+          &copy; copyright 2022. All Rights Reserved
+        </div>
+      </div>
+      <div class="border-b w-full lg:w-90 mx-auto hidden lg:block"></div>
+      <div
+        class="text-textLightSecondary text-xs font-600 py-6 px-4 text-center"
+      >
+        Crafted by
+        <a
+          href="https://www.prabidhilabs.com"
+          target="_blank"
+          class="text-secondary font-bold"
+          >Prabidhilabs</a
+        >
+        <sup>&copy;</sup> 2022
+      </div>
+    </div>
+  </div>

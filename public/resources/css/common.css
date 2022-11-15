@@ -1,0 +1,71 @@
+html {
+  scroll-behavior: smooth;
+  letter-spacing: 0.02em;
+}
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tracking-header {
+  letter-spacing: 0.04em;
+}
+
+.mobile-nav {
+  height: 87px;
+  z-index: 15;
+  @apply text-textDark sticky top-0;
+}
+
+#sidebar .arrow {
+  width: 9.1px;
+  height: 5.43px;
+}
+.sidebar-item,
+.sidebar-item > div:first-child {
+  min-height: 82px;
+}
+
+.main-nav-logo {
+  width: 59px;
+  height: 59px;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-nav {
+    height: 158px;
+  }
+  .main-nav-logo {
+    width: 110px;
+    height: 110px;
+  }
+  .serve-to-change-lives {
+    width: 128px;
+    height: 36px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-nav-logo {
+    width: 56px;
+    height: 56px;
+  }
+  .serve-to-change-lives {
+    width: 135px;
+    height: 40px;
+  }
+}

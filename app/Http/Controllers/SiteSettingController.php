@@ -24,7 +24,8 @@ class SiteSettingController extends Controller
      */
     public function create()
     {
-        //
+        $setting = SiteSetting::first();
+        return view('admin.Setting.create', compact('setting'));
     }
 
     /**
@@ -67,9 +68,27 @@ class SiteSettingController extends Controller
      * @param  \App\Models\SiteSetting  $siteSetting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SiteSetting $siteSetting)
+    public function update(Request $request, $id)
     {
-        //
+        $data = SiteSetting::find($id);
+
+        if (isset($request->image)) {
+
+            $data->image = save_image($request->image);
+        }
+
+        if (isset($request->alternate_image)) {
+
+            $data->alternate_image = save_image($request->alternate_image);
+        }
+
+        $data->site_title = $request->site_title;
+        $data->district = $request->district;
+        $data->club_number = $request->club_number;
+        $data->contact_number = $request->contact_number;
+        $data->update();
+        notify()->success("Setting Updated Sucessfully");
+        return redirect()->back();
     }
 
     /**

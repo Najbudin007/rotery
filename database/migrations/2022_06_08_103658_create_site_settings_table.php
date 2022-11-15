@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('site_settings', function (Blueprint $table) {
             $table->id();
+            $table->string("image")->nullable();
+            $table->text("site_title")->nullable();
+            $table->string("alternate_image")->nullable();
+            $table->text("district")->nullable();
+            $table->string("club_number")->nullable();
+            $table->string("contact_number")->nullable();
             $table->timestamps();
         });
     }

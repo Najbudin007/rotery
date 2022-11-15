@@ -1,45 +1,199 @@
-  <div class=" lg:w-7/12 bg-gray-200 flex flex-col  z-40">
-      <div class=" my-60 flex justify-between items-center  ">
+<?php
+$news = App\Models\News::where('status', 'active')
+    ->latest()
+    ->limit(2)
+    ->get();
+?>
+<div class="bg-bgLightSecondary px-4 py-6 md:p-10 lg:px-16 space-y-7 lg:flex lg:flex-col" style="flex: 2">
+    <div class="flex justify-between">
+        <div class="text-xl lg:text-2xl text-textDarkSecondary font-playFair font-700">
+            OUR NEWS
+        </div>
+        <a href="{{ route('allNews') }}"
+            class="hidden lg:flex items-center space-x-4 cursor-pointer bg-primary overflow-hidden rounded px-6 h-10.5 text-xs font-500 text-white">
+            <div>View All</div>
+            <div>
+                <img src="./resources/images/icons/double-arrow.svg" alt="double arrow" />
+            </div>
+        </a>
+    </div>
 
+    <!-- Swiper For Mobile And Tablet -->
+    <div class="news-swiper lg:hidden overflow-hidden">
+        <!-- All News Cards -->
+        <div class="swiper-wrapper">
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
-          <h2 class="font-bold text-2xl leading-auto uppercase text-gray-150  rounded-md font-playFair">
-              Our News</h2>
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
-          <button class=" bg-blue-100 px-20 py-10 rounded-xs text-white flex items-center">
-              <span class=' font-medium text-xs leading-[117.4%] mr-4'>View All</span>
-              <img src="{{ asset('frontend-theme/images/arrow.svg') }}" alt=" Your Steel Storage" />
-          </button>
-      </div>
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 justify-between gap-x-40">
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
-          <div class="my-20 lg:mt-0">
-              <img src='{{ asset('frontend-theme/images/news1.png') }}' class="object-cover w-full rounded-md h-214" />
-              <h4 class="font-semiBold text-lg leading-[127%] text-blue-100 px-20 mt-24">Lorem Ipsum
-                  is simply dummy text</h4>
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
 
-              <p class="font-normal text-sm leading-[172%] px-20 mt-20 ">Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry...</p>
+            <!-- Invididual News Card -->
+            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                <div>
+                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+                </div>
+                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        The best golf course in Nepal
+                    </a>
+                </div>
+                <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                    Rotary Club of Himalayan Golf course is the best golf course
+                    in Nepal...
+                </div>
+                <div class="text-secondary text-xxs px-4 pb-3">
+                    12-20-2021
+                </div>
+            </div>
+        </div>
+    </div>
 
-              <p class="font-normal text-xs text-orange px-20 mt-20">12-20-2021</p>
+    <!-- News For Laptop and Higher Resolutions -->
+    <div class="hidden lg:block lg:flex-1">
+        <div class="flex space-x-8 h-full">
+            @foreach ($news as $new)
+                <!-- Invididual News Card -->
+                <div class="bg-white news-card rounded-xl flex flex-col">
+                    <div class="flex-1">
+                        <img src="{{ asset('images/' . $new->image) }}" alt="golf course" class="w-full h-full" />
+                    </div>
+                    <div class="flex flex-col justify-between py-6 space-y-4">
+                        <div class="h-[60px]">
+                            <a href="news/news-detail.html"
+                                class="text-lg text-primary border-l line-clamp-2 border-secondary px-4 font-600"
+                                style="border-left-width: 3px">
+                                {{ $new->title }}
+                            </a>
+                        </div>
+                        <div class="text-sm text-textDarkSecondary px-4 leading-7 line-clamp-2">
+                            {{ $new->short_description }}
+                        </div>
+                        <div class="text-secondary text-xxs px-4">{{ $new->created_at->diffForHumans() }}</div>
+                    </div>
+                </div>
+            @endforeach
 
+            <!-- Invididual News Card -->
 
-          </div>
+        </div>
+    </div>
 
-          <div class="my-20 lg:mt-0">
-
-              <img src='{{ asset('frontend-theme/images/news2.png') }}' class="object-cover w-full rounded-md h-214" />
-
-              <h4 class="font-semiBold text-lg leading-[127%] text-blue-100 px-20 mt-24 ">Lorem Ipsum
-                  is simply dummy text</h4>
-
-              <p class="font-normal text-sm leading-[172%] px-20 mt-20 ">Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry...</p>
-
-              <p class="font-normal text-xs text-orange px-20 mt-20">12-20-2021</p>
-
-
-          </div>
-      </div>
-  </div>
+    <div class="flex justify-end lg:hidden">
+        <a href="{{ route('allNews') }}"
+            class="flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary">
+            <div>View All</div>
+            <div>
+                <img src="./resources/images/icons/double-arrow-yellow.svg" alt="double arrow" />
+            </div>
+        </a>
+    </div>
+</div>

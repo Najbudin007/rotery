@@ -1,40 +1,45 @@
-  <div
-      class=" w-full flex flex-col justify-center items-center lg:block  lg:justify-start lg:items-start lg:w-5/12   relative  ">
+<?php
+$notices = App\Models\Notice::where('status', 'active')
+    ->latest()
+    ->limit(4)
+    ->get();
+?>
+<div class="bg-primary p-4 md:p-10 lg:flex-1">
+    <div class="lg:w-90 ml-auto space-y-7">
+        <div class="text-xl lg:text-2xl text-white font-playFair font-700">
+            NOTICE
+        </div>
+        <div class="space-y-2">
+            @foreach ($notices as $key => $notice)
+                @if ($key <= 0)
+                    <div class="bg-white rounded border-l border-secondary p-4" style="border-left-width: 6px">
+                        <div class="text-textLightSecondary text-xs">
+                            {{ $notice->created_at->diffForHumans() }}
+                        </div>
+                        <div class="text-sm text-textDarkSecondary leading-6 pt-1">
+                            {{ $notice->title }}
+                        </div>
+                    </div>
+                @else
+                    <div class="bg-white rounded p-4">
+                        <div class="text-textLightSecondary text-xs">
+                            {{ $notice->created_at->diffForHumans() }}
+                        </div>
+                        <div class="text-sm text-textDarkSecondary leading-6 pt-1">
+                            {{ $notice->title }}
+                        </div>
+                    </div>
+                @endif
+            @endforeach
 
-      <div class="bg-blue-100 h-full w-full left-[-10%] absolute notice-div"></div>
-
-      <div
-          class=" relative w-full z-40 my-60 flex flex-col justify-center items-center lg:justify-start lg:items-start ">
-
-          <h2 class="font-bold text-2xl leading-auto uppercase text-white font-playFair mb-32   ">
-              Notice</h2>
-
-          <div class="w-10/12  bg-white rounded-sm px-24 my-10 py-20 flex flex-col">
-              <span class="font-medium text-xs text-gray-100">12 Jan, 2020</span>
-              <p class="font-medium text-sm leading-[160%]">Lorem Ipsum is simply dummy text</p>
-          </div>
-
-          <div class="w-10/12 bg-white rounded-sm px-24 my-10 py-20 flex flex-col">
-              <span class="font-medium text-xs text-gray-100">12 Jan, 2020</span>
-              <p class="font-medium text-sm leading-[160%]">Lorem Ipsum is simply dummy text</p>
-          </div>
-
-          <div class="w-10/12 bg-white rounded-sm px-24 my-10 py-20 flex flex-col">
-              <span class="font-medium text-xs text-gray-100">12 Jan, 2020</span>
-              <p class="font-medium text-sm leading-[160%]">Lorem Ipsum is simply dummy text</p>
-          </div>
-
-
-          <div class="w-10/12  bg-white rounded-sm px-24 my-10 py-20 flex flex-col">
-              <span class="font-medium text-xs text-gray-100">12 Jan, 2020</span>
-              <p class="font-medium text-sm leading-[160%]">Lorem Ipsum is simply dummy text.</p>
-          </div>
-
-          <button class=" rounded-sm  text-white mt-24 flex items-center">
-              <span class=' font-medium text-xs leading-[117.4%] mr-4'>View All</span>
-              <img src="{{ asset('frontend-theme/images/arrow.svg') }}" alt=" Your Steel Storage" />
-          </button>
-      </div>
-
-
-  </div>
+        </div>
+        <div class="flex justify-end lg:justify-start font-500 text-xs">
+            <a href="{{ route('allNews') }}" class="flex items-center space-x-2 cursor-pointer text-white">
+                <div>View All</div>
+                <div>
+                    <img src="./resources/images/icons/double-arrow-yellow.svg" alt="double arrow" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
