@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SiteSetting;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -52,4 +53,10 @@ class FrontEndController extends Controller
     {
         return view('frontend.pages.videos');
     }
+    
+    public function homeAboutUs() {
+       
+        return view('frontend.template.aboutus');
+    }
+
 }

@@ -2,13 +2,13 @@
 <div>
     <!-- Hero Section For Mobile -->
     <div class="md:hidden">
-        <img src="./resources/images/home/hands-together-mobile.png" {{-- {{ asset('images/' . $banner->image) }} --}} class="w-full"
+        <img src="./resources/images/home/hands-together-mobile.png" {{ asset('images/' . $banner->image) }} class="w-full"
             alt="hands together" />
     </div>
 
     <!-- Hero Section For Tablet -->
     <div class="hidden md:block lg:hidden">
-        <img src="./resources/images/home/hands-together-tablet.png" class="w-full" alt="hands together" />
+        <img src="{{ asset('images/' . $banner->image) }}" class="w-full" alt="hands together" />
     </div>
 
     <!-- Common Hero Section Contents For Mobile And Tablet -->
@@ -18,20 +18,18 @@
                 <img src="./resources/images/icons/zigzag-line.svg" alt="hands together" />
             </div>
             <div class="text-xs text-textDark font-openSans font-700" style="letter-spacing: 0.29em">
-                {{-- {{$banner->title}} --}}
+                {{$banner->title}}
             </div>
         </div>
         <div class="text-primary font-playFair font-700 text-xl" style="letter-spacing: 0.035em">
-            A prodigious club bringing fabulous people together
+            {!! nl2br($banner->description) !!}
         </div>
         <div class="text-textLight text-sm leading-6">
-            <span class="hidden md:inline">Rotary Club of Himalayan Golf Course is an amazing club that aims
-                to provide astonishing experience.</span>
-            Rotary Club of Himalayan Golf Course is an amazing club that aims to
-            provide astonishing experience....
+            <span class="hidden md:inline">
+                {!! nl2br($banner->short_description) !!}
         </div>
         <div class="flex justify-end">
-            <a href="about/about-our-club.html"
+            <a href="{{route('about-our-club')}}"
                 class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-6 py-3 text-sm text-white">
                 <div>Read More</div>
                 <div>
@@ -56,19 +54,17 @@
                                 <img src="./resources/images/icons/zigzag-line.svg" alt="zigzag line" />
                             </div>
                             <div class="text-xs font-openSans font-700" style="letter-spacing: 0.415em">
-                                {{-- {{ $banner->title }} --}}
+                                {!! nl2br($banner->description) !!}
                             </div>
                         </div>
                         <h1 class="text-3xl font-playFair font-900">
-                            A prodigious club bringing
-                            fabulous people together
+                           {{$banner->description}}
                         </h1>
                         <div class="">
-                            Rotary Club of Himalayan Golf Course is an amazing <br />
-                            club that aims to provide astonishing experience....
+                            {!! nl2br($banner->short_description) !!}
                         </div>
                         <div class="inline-block">
-                            <a href="about/about-our-club.html"
+                            <a href="{{route('about-our-club')}}"
                                 class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-6 py-3 text-sm text-white">
                                 <div>Read More</div>
                                 <div>

@@ -1,10 +1,11 @@
+<?php $logos = App\Models\SiteSetting::first() ?>
 <nav class="text-textDark z-20 sticky top-0 bg-white shadow">
     <!-- Navigation for mobile and tablet -->
     <div class="flex justify-between items-center px-4 lg:hidden relative mobile-nav">
         <div class="cursor-pointer" onclick="toggleSidebar(true)">
             <img src="{{ asset('resources/images/icons/hamburger-menu.svg') }}" class="" alt="hamburger menu" />
         </div>
-        <a href="index.html" class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <a href="/" class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <img src="{{ asset('resources/images/rotary-logo.png') }}" alt="Rotary Club" class="w-full main-nav-logo" />
         </a>
         <div>
@@ -179,11 +180,11 @@
                     <div class="flex items-center flex-shrink-0 w-72 xl:w-80">
                         <a href="/" class="flex-shrink-0 flex">
                             <div class="flex-shrink-0">
-                                <img src="{{ asset('resources/images/company-name.png') }}" alt="Rotary Club"
+                                <img src="{{ asset('images/' .$logos->image) }}" alt="Rotary Club"
                                     style="width: 83px; height: 53px" />
                             </div>
                             <div class="px-2 border-r-2 mr-2 border-gray-200">
-                                <img src="{{ asset('resources/images/rotary-logo.png') }}" alt="Rotary Club"
+                                <img src="{{ asset('images/' .$logos->alternate_image) }}" alt="Rotary Club"
                                     class="main-nav-logo" />
                             </div>
                             <div class="text-sm text-primary font-hind font-700">
@@ -195,9 +196,9 @@
                     </div>
                     <div class="text-xs text-textLight">
                         <span>District: </span>
-                        <span class="text-primary font-semibold">1010</span>
+                        <span class="text-primary font-semibold">{{$logos->district}}</span>
                         <span>, Club Number: </span>
-                        <span class="text-primary font-semibold">123456</span>
+                        <span class="text-primary font-semibold">{{$logos->club_number}}</span>
                     </div>
                 </div>
                 <div>
