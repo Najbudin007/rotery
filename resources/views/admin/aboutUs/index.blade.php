@@ -22,7 +22,6 @@
                                 </th>
                                 <th>Id</th>
                                 <th>Title</th>
-                                <th>Description</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -53,10 +52,6 @@
                     {
                         data: 'title',
                         name: 'title'
-                    },
-                    {
-                        data: 'description',
-                        name: 'description'
                     },
                     {
                         data: 'status',

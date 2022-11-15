@@ -9,4 +9,10 @@ class summer_notes_upload extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function summerNote()
+    {
+        return $this->belongsTo(aboutUs::class);
+    }
+
 }

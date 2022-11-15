@@ -1,5 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
+    <?php  $about_club = App\Models\aboutus::first();
+    ?>
     <div class="bg-primary">
         <div class="max-w-7xl mx-auto about-hero-section relative md:pt-1">
             <h1 class="font-playFair font-600 text-white text-center px-4 pt-10 md:pt-16 lg:pt-20 md:px-10 xl:px-14">
@@ -14,10 +16,10 @@
 
             <div class="absolute bottom-0 left-0 translate-y-1/2 w-full">
                 <div class="px-5 md:px-10 xl:px-14">
-                    <img src="../resources/images/about/about-our-club.png" alt="Rotary Club" class="md:hidden w-full" />
-                    <img src="../resources/images/about/about-our-club1.png" alt="Rotary Club"
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club" class="md:hidden w-full" />
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club"
                         class="hidden md:inline-block lg:hidden w-full" />
-                    <img src="../resources/images/about/about-our-club2.png" alt="Rotary Club"
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club"
                         class="hidden lg:inline-block w-full" />
                 </div>
             </div>
@@ -47,7 +49,10 @@
             </div>
         </div>
     </div>
-
+    <div class="max-w-7xl mx-auto">
+{!! $about_club->description !!}
+{!! $about_club->summary !!}
+    </div>
     <!-- Who We Are? -->
     <div class="max-w-7xl mx-auto">
         <div class="px-4 pb-6 md:p-10 md:pt-0 xl:px-14 xl:pb-0 xl:pt-20">
