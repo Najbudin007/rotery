@@ -27,9 +27,9 @@ class FrontEndController extends Controller
         }
         return view('frontend.pages.member', compact('title'));
     }
+
     public function charterMembers()
     {
-
         return view('frontend.pages.charter-member');
     }
     public function membership()

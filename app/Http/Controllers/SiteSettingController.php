@@ -82,8 +82,14 @@ class SiteSettingController extends Controller
             $data->alternate_image = save_image($request->alternate_image);
         }
 
+        if (isset($request->about_image)) {
+
+            $data->about_image = save_image($request->about_image);
+        }
+
         $data->site_title = $request->site_title;
         $data->district = $request->district;
+        $data->description = $request->description;
         $data->club_number = $request->club_number;
         $data->contact_number = $request->contact_number;
         $data->update();
