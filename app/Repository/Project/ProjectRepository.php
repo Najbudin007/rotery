@@ -4,6 +4,7 @@ namespace App\Repository\Project;
 
 use App\Models\Project;
 use App\Repository\BaseRepository;
+use Illuminate\Support\Str;
 
 class ProjectRepository extends BaseRepository
 {
@@ -16,13 +17,16 @@ class ProjectRepository extends BaseRepository
         if ($data["image"]) {
             $data["image"] = save_image($data["image"]);
         }
+        $data['slug'] = Str::slug($data['title']);
         $this->model->create($data);
     }
     public function update($proj, $data)
     {
-        if ($data["image"]) {
+        if (isset($data["image"])) {
             $data["image"] = save_image($data["image"]);
         }
+        $data['slug'] = Str::slug($data['title']);
+
         $this->model->find($proj->id)->update($data);
     }
 }

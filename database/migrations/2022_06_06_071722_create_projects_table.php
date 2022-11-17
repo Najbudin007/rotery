@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger("project_type_id");
             $table->string("title");
+            $table->string("slug");
             $table->longText("description");
             $table->longText("short_description")->nullable();
             $table->string("image");
