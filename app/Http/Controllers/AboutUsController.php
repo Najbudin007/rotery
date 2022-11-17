@@ -65,6 +65,45 @@ class AboutUsController extends Controller
         if (isset($request->image)) {
             $data->image = save_image($request->image);
         }
+        // Who we are images section
+        if (isset($request->who_image1)) {
+            $data->who_image1 = save_image($request->who_image1);
+        }
+        if (isset($request->who_image2)) {
+            $data->who_image2 = save_image($request->who_image2);
+        }
+        if (isset($request->who_image3)) {
+            $data->who_image3 = save_image($request->who_image3);
+        }
+        if (isset($request->who_image4)) {
+            $data->who_image4 = save_image($request->who_image4);
+        }
+
+        // Why Us image Section
+        if (isset($request->why_image1)) {
+            $data->why_image1 = save_image($request->why_image1);
+        }
+        if (isset($request->why_image2)) {
+            $data->why_image2 = save_image($request->why_image2);
+        }
+        if (isset($request->why_image3)) {
+            $data->why_image3 = save_image($request->why_image3);
+        }
+        if (isset($request->why_image4)) {
+            $data->why_image4 = save_image($request->why_image4);
+        }
+
+        // Glimpse Image Section
+        if (isset($request->glimpse1)) {
+            $data->glimpse1 = save_image($request->glimpse1);
+        }
+        if (isset($request->glimpse2)) {
+            $data->glimpse2 = save_image($request->glimpse2);
+        }
+        if (isset($request->glimpse3)) {
+            $data->glimpse3 = save_image($request->glimpse3);
+        }
+
          $data->title = $request->title;
          $data->description = $request->description;
          $data->summary = $request->summary;
@@ -108,9 +147,50 @@ class AboutUsController extends Controller
     public function update(Request $request,$id)
     {
         $data = aboutUs::find($id);
+        // about banner image 
         if (isset($request->image)) {
             $data->image = save_image($request->image);
         }
+
+        // who we are image Section
+        if (isset($request->who_image1)) {
+            $data->who_image1 = save_image($request->who_image1);
+        }
+        if (isset($request->who_image2)) {
+            $data->who_image2 = save_image($request->who_image2);
+        }
+        if (isset($request->who_image3)) {
+            $data->who_image3 = save_image($request->who_image3);
+        }
+        if (isset($request->who_image4)) {
+            $data->who_image4 = save_image($request->who_image4);
+        }
+
+        // why we are image Section
+        if (isset($request->why_image1)) {
+            $data->why_image1 = save_image($request->why_image1);
+        }
+        if (isset($request->why_image2)) {
+            $data->why_image2 = save_image($request->why_image2);
+        }
+        if (isset($request->why_image3)) {
+            $data->why_image3 = save_image($request->why_image3);
+        }
+        if (isset($request->why_image4)) {
+            $data->why_image4 = save_image($request->why_image4);
+        }
+
+        // Glimpse of images section
+        if (isset($request->glimpse1)) {
+            $data->glimpse1 = save_image($request->glimpse1);
+        }
+        if (isset($request->glimpse2)) {
+            $data->glimpse2 = save_image($request->glimpse2);
+        }
+        if (isset($request->glimpse3)) {
+            $data->glimpse3 = save_image($request->glimpse3);
+        }
+
          $data->title = $request->title;
          $data->description = $request->description;
          $data->summary = $request->summary;

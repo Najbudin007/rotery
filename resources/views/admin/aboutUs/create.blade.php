@@ -34,7 +34,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Description</label>
+                                <label for="exampleInputEmail1">Who we are ?</label>
                                 <textarea type="text" id="summernote" class="form-control" rows="5" cols="10"
                                     placeholder="Enter description" name="description"> </textarea>
                                 @error('description')
@@ -44,9 +44,106 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Short Description</label>
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Who we are Image 1</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="who_image1">
+                                @error('who_image1')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Who we are Image 2</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="who_image2">
+                                @error('who_image2')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Who we are Image 3</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="who_image3">
+                                @error('who_image3')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Who we are Image 4</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="who_image4">
+                                @error('who_image4')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Why Us ?</label>
                                 <textarea type="text" class="form-control" id="summernote1" placeholder="Enter short description" name="summary"> </textarea>
                                 @error('summary')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Why Us Image 1</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="why_image1">
+                                @error('why_image1')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Why Us Image 2</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="why_image2">
+                                @error('why_image2')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Why Us Image 3</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="why_image3">
+                                @error('why_image3')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Why Us Image 4</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="why_image4">
+                                @error('why_image4')
                                     <div class="text-red">
                                         {{ $message }}
                                     </div>
@@ -65,7 +162,51 @@
                                     </div>
                                 @enderror
                             </div>
+                            
+                            <div class="my-3" style=" color: #000;font-weight: 500;font-family: revert;font-size: 21px;
+                            padding: 20px;">
+                                <span>
+                                    <h2>Glimpse of Event Section</h2>
+                                </span>
+                            </div>
 
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Gmimpse of Event image 1</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="glimpse1">
+                                @error('glimpse1')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Gmimpse of Event image 2</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="glimpse2">
+                                @error('glimpse2')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <img class="w-100" id="output00" alt=""
+                                    style="height:250px;object-fit:fill;min-width:100%;display:none">
+                                <label for="exampleInputEmail1">Gmimpse of Event image 3</label>
+                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                    placeholder="Add Photo picture" name="glimpse3">
+                                @error('glimpse3')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1"> Status</label>
