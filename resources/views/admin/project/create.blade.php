@@ -103,13 +103,43 @@
     </script>
 @endsection
 @section('scripts')
-    <script>
-        $('#summernote').summernote({
-            height: 100, // set editor height
-            minHeight: null, // set minimum height of editor
-            maxHeight: null, // set maximum height of editor
-            focus: true // set focus to editable area after initializing summernote
+
+<script>
+    $('#summernote').summernote({
+        placeholder: "Enter Your Description",
+        height: 100, // set editor height
+        minHeight: null, // set minimum height of editor
+        maxHeight: null, // set maximum height of editor
+        focus: true, // set focus to editable area after initializing summernote
+        callbacks: {
+            onImageUpload: function(files, editor, welEditable) {
+                var c = Object.values(files);
+                c.forEach(file => {
+                    sendFile(file, this);
+                });
+        }
+    }
+    });
+
+    function sendFile(file, el) {
+        var from_data = new FormData();
+        from_data.append('file', file);
+        $.ajax({
+            data: from_data,
+            type: "POST",
+            url: '/editor-upload',
+            cache: false,
+            contentType: false,
+            processData: false,
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            success: function(url) {
+                $(el).summernote('editor.insertImage', url);
+            }
         });
+    }
+
         $('#summernote1').summernote({
             height: 100, // set editor height
             minHeight: null, // set minimum height of editor

@@ -44,6 +44,16 @@
                                     </div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Designation</label>
+                                <input type="text" class="form-control" placeholder="Enter Designation" name="designation"
+                                    value="{{ $user->designation ?? '' }}" required>
+                                @error('designation')
+                                    <div class="text-red">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">

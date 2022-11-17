@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text("site_title")->nullable();
             $table->string("alternate_image")->nullable();
             $table->text("district")->nullable();
-            $table->text("description")->nullable();
+            $table->longText("description")->nullable();
             $table->string("club_number")->nullable();
             $table->string("contact_number")->nullable();
             $table->string("about_image")->nullable();

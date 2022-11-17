@@ -1,5 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
+    <?php  $about_club = App\Models\aboutus::first();
+    ?>
     <div class="bg-primary">
         <div class="max-w-7xl mx-auto about-hero-section relative md:pt-1">
             <h1 class="font-playFair font-600 text-white text-center px-4 pt-10 md:pt-16 lg:pt-20 md:px-10 xl:px-14">
@@ -14,10 +16,10 @@
 
             <div class="absolute bottom-0 left-0 translate-y-1/2 w-full">
                 <div class="px-5 md:px-10 xl:px-14">
-                    <img src="../resources/images/about/about-our-club.png" alt="Rotary Club" class="md:hidden w-full" />
-                    <img src="../resources/images/about/about-our-club1.png" alt="Rotary Club"
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club" class="md:hidden w-full" />
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club"
                         class="hidden md:inline-block lg:hidden w-full" />
-                    <img src="../resources/images/about/about-our-club2.png" alt="Rotary Club"
+                    <img src="{{asset('images/'.$about_club->image)}}" alt="Rotary Club"
                         class="hidden lg:inline-block w-full" />
                 </div>
             </div>
@@ -47,7 +49,8 @@
             </div>
         </div>
     </div>
-
+    <div class="max-w-7xl mx-auto">
+    </div>
     <!-- Who We Are? -->
     <div class="max-w-7xl mx-auto">
         <div class="px-4 pb-6 md:p-10 md:pt-0 xl:px-14 xl:pb-0 xl:pt-20">
@@ -57,18 +60,18 @@
                     <div class="space-x-8 flex">
                         <div class="space-y-8">
                             <div>
-                                <img src="../resources/images/about/golf-1.png" alt="Golf" class="h-80 w-full" />
+                                <img src="{{asset("images/". $about_club->who_image1)}}" alt="Golf" class="h-80 w-full" />
                             </div>
                             <div>
-                                <img src="../resources/images/about/golf-2.png" alt="Golf" class="h-56 w-full" />
+                                <img src="{{asset("images/". $about_club->who_image2)}}" alt="Golf" class="h-56 w-full" />
                             </div>
                         </div>
                         <div class="space-y-8">
                             <div>
-                                <img src="../resources/images/about/golf-2.png" alt="Golf" class="h-56 w-full" />
+                                <img src="{{asset("images/". $about_club->who_image3)}}" alt="Golf" class="h-56 w-full" />
                             </div>
                             <div>
-                                <img src="../resources/images/about/golf-1.png" alt="Golf" class="h-80 w-full" />
+                                <img src="{{asset("images/". $about_club->who_image4)}}" alt="Golf" class="h-80 w-full" />
                             </div>
                         </div>
                     </div>
@@ -80,23 +83,15 @@
                     </div>
                     <div class="flex space-x-5 lg:hidden">
                         <div class="flex-1">
-                            <img src="../resources/images/about/golf-1.png" alt="Golf" class="w-full h-60" />
+                            <img src="{{asset("images/". $about_club->who_image1)}}" alt="Golf" class="w-full h-60" />
                         </div>
                         <div class="flex-1 hidden md:block">
-                            <img src="../resources/images/about/golf-2.png" alt="Golf" class="w-full h-60" />
+                            <img src="{{asset("images/". $about_club->who_image2)}}" alt="Golf" class="w-full h-60" />
                         </div>
                     </div>
                     <div class="text-sm text-textLight md:text-black md:font-300 leading-7"
                         style="letter-spacing: -0.005em; word-spacing: 0.5em">
-                        Rotary Himalayan Golf Course is one of the best golf course in the
-                        World. We provide best services where our members can enjoy all
-                        the facilities to the full extent. One of the best golf course in
-                        the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent. One of the best golf course
-                        in the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent. One of the best golf course
-                        in the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent.
+                            {!! $about_club->description!!}
                     </div>
                 </div>
             </div>
@@ -113,23 +108,15 @@
                     </div>
                     <div class="flex space-x-5 lg:hidden">
                         <div class="flex-1">
-                            <img src="../resources/images/about/golf-1.png" alt="Golf" class="w-full h-60" />
+                            <img src="{{asset("images/". $about_club->why_image1)}}" alt="Golf" class="w-full h-60" />
                         </div>
                         <div class="flex-1 hidden md:block">
-                            <img src="../resources/images/about/golf-2.png" alt="Golf" class="w-full h-60" />
+                            <img src="{{asset("images/". $about_club->why_image2)}}" alt="Golf" class="w-full h-60" />
                         </div>
                     </div>
                     <div class="text-sm text-textLight md:text-black md:font-300 leading-7"
                         style="letter-spacing: -0.005em; word-spacing: 0.5em">
-                        Rotary Himalayan Golf Course is one of the best golf course in the
-                        World. We provide best services where our members can enjoy all
-                        the facilities to the full extent. One of the best golf course in
-                        the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent. One of the best golf course
-                        in the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent. One of the best golf course
-                        in the World. We provide best services where our members can enjoy
-                        all the facilities to the full extent.
+                        {!! $about_club->summary !!}
                     </div>
                 </div>
 
@@ -138,18 +125,18 @@
                     <div class="space-x-8 flex">
                         <div class="space-y-8">
                             <div>
-                                <img src="../resources/images/about/golf-1.png" alt="Golf" class="h-80 w-full" />
+                                <img src="{{asset("images/". $about_club->why_image1)}}" alt="Golf" class="h-80 w-full" />
                             </div>
                             <div>
-                                <img src="../resources/images/about/golf-2.png" alt="Golf" class="h-56 w-full" />
+                                <img src="{{asset("images/". $about_club->why_image2)}}" alt="Golf" class="h-56 w-full" />
                             </div>
                         </div>
                         <div class="space-y-8">
                             <div>
-                                <img src="../resources/images/about/golf-2.png" alt="Golf" class="h-56 w-full" />
+                                <img src="{{asset("images/". $about_club->why_image3)}}" alt="Golf" class="h-56 w-full" />
                             </div>
                             <div>
-                                <img src="../resources/images/about/golf-1.png" alt="Golf" class="h-80 w-full" />
+                                <img src="{{asset("images/". $about_club->why_image4)}}" alt="Golf" class="h-80 w-full" />
                             </div>
                         </div>
                     </div>
@@ -168,19 +155,19 @@
                 </div>
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
-                        <img src="../resources/images/about/special-event-1.png" alt="Special Event"
+                        <img src="{{asset("images/". $about_club->glimpse1)}}" alt="Special Event"
                             class="w-full h-40 md:h-80" />
                     </div>
                     <div>
-                        <img src="../resources/images/about/special-event-2.png" alt="Special Event"
+                        <img src="{{asset("images/". $about_club->glimpse2)}}" alt="Special Event"
                             class="w-full h-40 md:h-80" />
                     </div>
                     <div>
-                        <img src="../resources/images/about/special-event-3.png" alt="Special Event"
+                        <img src="{{asset("images/". $about_club->glimpse3)}}" alt="Special Event"
                             class="w-full h-40 md:h-80" />
                     </div>
                     <div class="lg:hidden">
-                        <img src="../resources/images/about/special-event-4.png" alt="Special Event"
+                        <img src="{{asset("images/". $about_club->glimpse1)}}" alt="Special Event"
                             class="w-full h-40 md:h-80" />
                     </div>
                 </div>

@@ -486,7 +486,7 @@
         </div>
     </div>
 
-    {{-- popu;ar news --}}
+    {{-- popular news --}}
 
     <div>
         <div class="max-w-7xl mx-auto py-6 md:py-10 lg:py-16" style="flex: 2">

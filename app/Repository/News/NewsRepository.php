@@ -37,6 +37,7 @@ class NewsRepository extends BaseRepository
             $data['image']->move(public_path("images"), $img);
             $data['image'] = $img;
         }
+        
         $d = [];
 
         if (isset($data["files"])) {

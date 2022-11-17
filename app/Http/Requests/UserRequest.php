@@ -31,7 +31,8 @@ class UserRequest extends FormRequest
             "address" => "required",
             "number" => "required",
             "image" => "sometimes",
-            "role_id" => "sometimes"
+            "role_id" => "sometimes",
+            "designation"=>"sometimes"
         ];
     }
 }

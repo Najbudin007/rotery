@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryFolderController;
@@ -86,8 +87,11 @@ Route::get('/projects', [FrontEndController::class, 'allProject'])->name('allPro
 Route::get('/membership', [FrontEndController::class, 'membership'])->name('membership');
 Route::get('/contact-us', [FrontEndController::class, 'contact'])->name('contact');
 Route::get('/all-news', [FrontEndController::class, 'news'])->name('allNews');
+Route::get('/home-about', [FrontEndController::class, 'homeAboutUs'])->name('homeAbout');
 Route::get('/rotary-photos', [FrontEndController::class, 'photo'])->name('photo');
 Route::get('/rotary-videos', [FrontEndController::class, 'videos'])->name('videos');
+Route::resource("/contactForm", ContactController::class);
+
 
 
 require __DIR__ . '/auth.php';

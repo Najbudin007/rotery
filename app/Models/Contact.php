@@ -5,14 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class summer_notes_upload extends Model
+class Contact extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    public function summerNote()
-    {
-        return $this->belongsTo(aboutUs::class);
-    }
-
 }
