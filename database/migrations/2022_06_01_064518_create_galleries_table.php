@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger("gallery_folder_id");
             $table->string("image")->nullable();
             $table->enum("type", ["image", "video"]);
-            $table->string("link")->nullable();
+            $table->longText("link")->nullable();
             $table->enum("status", ["active", "inactive"])->default("inactive");
             $table->foreign("gallery_folder_id")->references("id")->on("gallery_folders")->onDelete("cascade");
             $table->softDeletes();

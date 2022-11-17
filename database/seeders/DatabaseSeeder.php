@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\Role::create([
-            'name' => 'developer',
+            'name' => 'admin',
         ]);
         \App\Models\User::factory()->create();
     }

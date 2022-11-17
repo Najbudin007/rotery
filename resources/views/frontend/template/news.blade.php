@@ -23,137 +23,23 @@ $news = App\Models\News::where('status', 'active')
         <!-- All News Cards -->
         <div class="swiper-wrapper">
             <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
+            @foreach ($news as $new)
+                <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
+                    <div>
+                        <img src="{{ asset('images/' . $new->image) }}" alt="golf course" class="w-full" />
+                    </div>
+                    <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
+                        <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                            {{ $new->title }} </a>
+                    </div>
+                    <div class="text-xs text-textDarkSecondary px-4 leading-6">
+                        {!! $new->short_description !!}
+                    </div>
+                    <div class="text-secondary text-xxs px-4 pb-3">
+                        {{ $new->created_at->diffForHumans() }}
+                    </div>
                 </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
-
-            <!-- Invididual News Card -->
-            <div class="bg-white space-y-3 news-card rounded-xl swiper-slide">
-                <div>
-                    <img src="./resources/images/home/golf-course.png" alt="golf course" class="w-full" />
-                </div>
-                <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                    <a href="news/news-detail.html" class="text-sm text-primary font-600">
-                        The best golf course in Nepal
-                    </a>
-                </div>
-                <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                    Rotary Club of Himalayan Golf course is the best golf course
-                    in Nepal...
-                </div>
-                <div class="text-secondary text-xxs px-4 pb-3">
-                    12-20-2021
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 

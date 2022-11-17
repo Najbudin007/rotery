@@ -1,4 +1,4 @@
-<?php $logos = App\Models\SiteSetting::first() ?>
+<?php $logos = App\Models\SiteSetting::first(); ?>
 <nav class="text-textDark z-20 sticky top-0 bg-white shadow">
     <!-- Navigation for mobile and tablet -->
     <div class="flex justify-between items-center px-4 lg:hidden relative mobile-nav">
@@ -180,12 +180,17 @@
                     <div class="flex items-center flex-shrink-0 w-72 xl:w-80">
                         <a href="/" class="flex-shrink-0 flex">
                             <div class="flex-shrink-0">
-                                <img src="{{ asset('images/' .$logos->image) }}" alt="Rotary Club"
-                                    style="width: 83px; height: 53px" />
+                                @if (isset($logos->image))
+                                    <img src="{{ asset('images/' . $logos->image) }}" alt="Rotary Club"
+                                        style="width: 83px; height: 53px" />
+                                @endif
+
                             </div>
                             <div class="px-2 border-r-2 mr-2 border-gray-200">
-                                <img src="{{ asset('images/' .$logos->alternate_image) }}" alt="Rotary Club"
-                                    class="main-nav-logo" />
+                                @if (isset($logos->alternate_image))
+                                    <img src="{{ asset('images/' . $logos->alternate_image) }}" alt="Rotary Club"
+                                        class="main-nav-logo" />
+                                @endif
                             </div>
                             <div class="text-sm text-primary font-hind font-700">
                                 Club of <br />
@@ -196,9 +201,13 @@
                     </div>
                     <div class="text-xs text-textLight">
                         <span>District: </span>
-                        <span class="text-primary font-semibold">{{$logos->district}}</span>
+                        @if (isset($logos->district))
+                            <span class="text-primary font-semibold">{{ $logos->district }}</span>
+                        @endif
                         <span>, Club Number: </span>
-                        <span class="text-primary font-semibold">{{$logos->club_number}}</span>
+                        @if (isset($logos->club_number))
+                            <span class="text-primary font-semibold">{{ $logos->club_number }}</span>
+                        @endif
                     </div>
                 </div>
                 <div>
