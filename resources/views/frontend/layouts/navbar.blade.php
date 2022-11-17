@@ -1,4 +1,4 @@
-<?php $logos = App\Models\SiteSetting::first() ?>
+<?php $logos = App\Models\SiteSetting::first(); ?>
 <nav class="text-textDark z-20 sticky top-0 bg-white shadow">
     <!-- Navigation for mobile and tablet -->
     <div class="flex justify-between items-center px-4 lg:hidden relative mobile-nav">
@@ -66,10 +66,10 @@
 
                     <div class="overflow-hidden collapse-menu transition-all duration-300" style="height: 0px">
                         <div class="space-y-6 pl-8 flex flex-col">
-                            <a href="about/about-our-club.html">About Our Club</a>
-                            <a href="about/board-members.html">Our Board</a>
-                            <a href="about/members.html">Our Members</a>
-                            <a href="about/charter-members.html">Our Charter Members</a>
+                            <a href="{{ route('about-our-club') }}">About Our Club</a>
+                            <a href="{{ route('members', 'board-members') }}">Our Board</a>
+                            <a href="{{ route('members') }}">Our Members</a>
+                            <a href="{{ route('charterMember') }}">Our Charter Members</a>
                         </div>
                     </div>
                 </div>
@@ -79,8 +79,8 @@
                     <div class="flex justify-between items-center cursor-pointer" onClick="toggleMenus(1, 5)">
                         <div class="flex items-center space-x-4">
                             <div>
-                                <img src="{{ asset('resources/images/icons/navigation/projects.svg') }}" class="w-5 h-5"
-                                    alt="projects icon" />
+                                <img src="{{ asset('resources/images/icons/navigation/projects.svg') }}"
+                                    class="w-5 h-5" alt="projects icon" />
                             </div>
                             <div>OUR PROJECTS</div>
                         </div>
@@ -93,11 +93,11 @@
 
                     <div class="overflow-hidden collapse-menu transition-all duration-300" style="height: 0px">
                         <div class="space-y-6 pl-8 flex flex-col">
-                            <a href="projects/individual-project.html">Global Grants</a>
-                            <a href="projects/individual-project.html">Community Projects</a>
-                            <a href="projects/individual-project.html">Earthquake Relief Assistance</a>
-                            <a href="projects/individual-project.html">Looking For Funding</a>
-                            <a href="projects/all-projects.html">View All Projects</a>
+                            @foreach (App\Models\Project::latest()->take(3)->get() as $proj)
+                                <a href="{{ route('singleProject', $proj->slug) }}">{{ $proj->title }}</a>
+                            @endforeach
+
+                            <a href="{{ route('allProject') }}">View All Projects</a>
                         </div>
                     </div>
                 </div>
@@ -180,12 +180,17 @@
                     <div class="flex items-center flex-shrink-0 w-72 xl:w-80">
                         <a href="/" class="flex-shrink-0 flex">
                             <div class="flex-shrink-0">
-                                <img src="{{ asset('images/' .$logos->image) }}" alt="Rotary Club"
-                                    style="width: 83px; height: 53px" />
+                                @if (isset($logos->image))
+                                    <img src="{{ asset('images/' . $logos->image) }}" alt="Rotary Club"
+                                        style="width: 83px; height: 53px" />
+                                @endif
+
                             </div>
                             <div class="px-2 border-r-2 mr-2 border-gray-200">
-                                <img src="{{ asset('images/' .$logos->alternate_image) }}" alt="Rotary Club"
-                                    class="main-nav-logo" />
+                                @if (isset($logos->alternate_image))
+                                    <img src="{{ asset('images/' . $logos->alternate_image) }}" alt="Rotary Club"
+                                        class="main-nav-logo" />
+                                @endif
                             </div>
                             <div class="text-sm text-primary font-hind font-700">
                                 Club of <br />
@@ -196,9 +201,13 @@
                     </div>
                     <div class="text-xs text-textLight">
                         <span>District: </span>
-                        <span class="text-primary font-semibold">{{$logos->district}}</span>
+                        @if (isset($logos->district))
+                            <span class="text-primary font-semibold">{{ $logos->district }}</span>
+                        @endif
                         <span>, Club Number: </span>
-                        <span class="text-primary font-semibold">{{$logos->club_number}}</span>
+                        @if (isset($logos->club_number))
+                            <span class="text-primary font-semibold">{{ $logos->club_number }}</span>
+                        @endif
                     </div>
                 </div>
                 <div>
@@ -275,19 +284,11 @@
 
                         <div class="absolute top-full left-0 bg-primary hidden group-hover:block shadow-xl"
                             style="padding: 27px">
-                            <a href="{{ route('singleProject', 'abc') }}" class="cursor-pointer block">Global
-                                Grants</a>
-                            <a href="{{ route('singleProject', 'abc') }}" class="cursor-pointer block"
-                                style="margin: 14px 0">
-                                Community Projects
-                            </a>
-                            <a href="{{ route('singleProject', 'abc') }}" class="truncate cursor-pointer block">
-                                Earthquake Relief Resistance
-                            </a>
-                            <a href="{{ route('singleProject', 'abc') }}" class="cursor-pointer block"
-                                style="margin: 14px 0">
-                                Looking For Funding
-                            </a>
+                            @foreach (App\Models\Project::latest()->take(3)->get() as $proj)
+                                <a href="{{ route('singleProject', $proj->slug) }}"
+                                    class="cursor-pointer block">{{ $proj->title }}</a>
+                            @endforeach
+
                             <a href="{{ route('allProject') }}" class="cursor-pointer block"
                                 style="margin-top: 14px 0">View All Projects</a>
                         </div>

@@ -28,7 +28,7 @@ class ProjectRequest extends FormRequest
             "title" => "required",
             "description" => "required",
             "short_description" => "sometimes",
-            "image" => "required",
+            "image" => "sometimes",
             "status" => "required",
         ];
     }

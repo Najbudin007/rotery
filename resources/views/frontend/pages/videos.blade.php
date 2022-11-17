@@ -1,5 +1,11 @@
 @extends('frontend.layouts.master')
 @section('content')
+    <style>
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <div class="max-w-7xl mx-auto">
         <div class="px-4 py-6 md:p-10 xl:px-14 space-y-5">
             <!-- Header -->
@@ -8,7 +14,7 @@
             </h1>
 
             <!-- Year Slider -->
-            <div class="swiper font-600 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+            {{-- <div class="swiper font-600 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
                 <div class="swiper-wrapper text-xs flex" id="swiper-wrapper-d1ee3e6dfc012e5c" aria-live="polite">
                     <div class="flex-shrink-0 text-center w-28 lg:w-30 swiper-slide bg-primary border border-primary text-white py-2.5 rounded cursor-pointer swiper-slide-active"
                         role="group" aria-label="1 / 8" style="margin-right: 16px;">
@@ -44,55 +50,30 @@
                     </div>
                 </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-            </div>
+            </div> --}}
 
             <!-- Rotary Videos -->
             <div class="grid gap-5 lg:gap-8 grid-cols-2 lg:grid-cols-3">
                 <!-- Front Large Video -->
-                <div class="h-48 md:h-96 lg:h-128 col-span-2 lg:col-span-3">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
+                @foreach ($videos as $key => $video)
+                    @if ($key <= 0)
+                        <div class="h-48 md:h-96 lg:h-128 col-span-2 lg:col-span-3">
+                            {{-- <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen=""></iframe> --}}
+                            {!! $video->link !!}
+                        </div>
+                    @endif
+                    @if ($key >= 1)
+                        <!-- Other Smaller Videos -->
+                        <div class="h-36 md:h-[243px] lg:h-[258px]">
+                            {!! $video->link !!}
 
-                <!-- Other Smaller Videos -->
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="h-36 md:h-[243px] lg:h-[258px]">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/7Bc6TUtelto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
+                        </div>
+                    @endif
+                @endforeach
+
             </div>
         </div>
     </div>

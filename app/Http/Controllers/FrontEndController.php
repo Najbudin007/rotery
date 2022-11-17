@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
+use App\Models\Project;
 use App\Models\SiteSetting;
 use App\Models\Slider;
 use App\Models\User;
@@ -11,11 +13,13 @@ class FrontEndController extends Controller
 {
     public function singleProject($slug)
     {
-        return view('frontend.pages.individual_project');
+        $project = Project::where('slug', $slug)->first();
+        return view('frontend.pages.individual_project', compact('project'));
     }
     public function allProject()
     {
-        return view('frontend.pages.all_project');
+        $projects = Project::latest()->get();
+        return view('frontend.pages.all_project', compact('projects'));
     }
     public function aboutUs()
     {
@@ -26,27 +30,27 @@ class FrontEndController extends Controller
         $title = "";
         if ($slug == "board-members") {
             $title = "BOARD";
-            $members = User::whereHas('role',function($role){
-                $role->where('name','board member');
+            $members = User::whereHas('role', function ($role) {
+                $role->where('name', 'board member');
             })->get();
-        }else{
-            $members = User::whereHas('role',function($role){
-                $role->where('name','member');
+        } else {
+            $members = User::whereHas('role', function ($role) {
+                $role->where('name', 'member');
             })->get();
         }
-       
-        return view('frontend.pages.member', compact('title','members'));
+
+        return view('frontend.pages.member', compact('title', 'members'));
     }
 
     public function charterMembers()
     {
-        $members = User::whereHas('role',function($role){
-            $role->where('name','charter member');
+        $members = User::whereHas('role', function ($role) {
+            $role->where('name', 'charter member');
         })->get();
-        $president = User::where('designation','president')->whereHas('role',function($role){
-            $role->where('name','charter member');
+        $president = User::where('designation', 'president')->whereHas('role', function ($role) {
+            $role->where('name', 'charter member');
         })->first();
-        return view('frontend.pages.charter-member',compact('members','president'));
+        return view('frontend.pages.charter-member', compact('members', 'president'));
     }
     public function membership()
     {
@@ -62,16 +66,18 @@ class FrontEndController extends Controller
     }
     public function photo()
     {
-        return view('frontend.pages.photos');
+        $photos = Gallery::where('type', 'image')->latest()->get();
+        return view('frontend.pages.photos', compact('photos'));
     }
     public function videos()
     {
-        return view('frontend.pages.videos');
-    }
-    
-    public function homeAboutUs() {
-       
-        return view('frontend.template.aboutus');
+        $videos = Gallery::where('type', 'video')->latest()->get();
+        return view('frontend.pages.videos', compact('videos'));
     }
 
+    public function homeAboutUs()
+    {
+
+        return view('frontend.template.aboutus');
+    }
 }

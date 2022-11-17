@@ -6,13 +6,14 @@
             <!-- Detail About Individual Project -->
             <div>
                 <h1 class="font-playFair text-center font-700 text-primary text-lg tracking-header md:text-xl lg:text-2xl">
-                    Rotary Golf Club Community Service
+                    {{ $project->title }}
                 </h1>
                 <div class="pt-6 md:pt-10 pb-3.5">
-                    <img src="../resources/images/projects/rotary-golf-club-community-service.png"
-                        class="w-full h-[254px] md:h-[379px] lg:h-[562px]" alt="Rotary Golf Club Community Service">
+                    <img src="{{ asset('images/' . $project->image) }}" class="w-full h-[254px] md:h-[379px] lg:h-[562px]"
+                        alt="Rotary Golf Club Community Service">
                 </div>
-                <div class="text-textLight text-justify text-sm leading-7 lg:hidden">
+                {!! $project->description !!}
+                {{-- <div class="text-textLight text-justify text-sm leading-7 lg:hidden">
                     Rotary Himalayan Golf Course is one of the best golf course in the
                     World. We provide best services where our members can enjoy all the
                     facilities to the full extent. Rotary Himalayan Golf Course is one
@@ -83,10 +84,10 @@
                     our members can enjoy all the facilities to the full extent. One of
                     the best golf course in the World. We provide best services where
                     our members can enjoy all the facilities to the full extent.
-                </div>
+                </div> --}}
             </div>
 
-            <div>
+            {{-- <div>
                 <div class="font-playFair font-700 text-primary text-lg tracking-header pt-3 md:pt-6 md:text-xl">
                     Educational Awareness and Games
                 </div>
@@ -224,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
