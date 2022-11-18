@@ -151,9 +151,18 @@
 
                   <li class="nav-item">
                       <a href="{{ route('contactForm.index') }}" class="nav-link">
-                          <i class="nav-icon fas fa-message"></i>
+                          <i class="nav-icon fas fa-inbox"></i>
                           <p>
                               All Messages
+                          </p>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="{{ route('memberForm.index') }}" class="nav-link">
+                          <i class="nav-icon fas fa-user-tie"></i>
+                          <p>
+                              Membership Details
                           </p>
                       </a>
                   </li>

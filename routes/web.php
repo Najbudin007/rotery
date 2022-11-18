@@ -9,6 +9,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryFolderController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\MembersDetailsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\PermissionController;
@@ -91,6 +92,7 @@ Route::get('/home-about', [FrontEndController::class, 'homeAboutUs'])->name('hom
 Route::get('/rotary-photos', [FrontEndController::class, 'photo'])->name('photo');
 Route::get('/rotary-videos', [FrontEndController::class, 'videos'])->name('videos');
 Route::resource("/contactForm", ContactController::class);
+Route::resource("/memberForm", MembersDetailsController::class);
 
 
 

@@ -14,7 +14,10 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone Number</th>
-                                <th>Message</th>
+                                <th>Member Category</th>
+                                <th>Member Fees Category</th>
+                                <th>City</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                     </table>
@@ -30,7 +33,7 @@
             $('#datatables-example').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('contactForm.index') }}",
+                ajax: "{{ route('memberForm.index') }}",
                 columns: [
                     {
                         data: 'id',
@@ -49,8 +52,21 @@
                         name: 'phone'
                     },
                     {
-                        data: 'Message',
-                        name: 'Message'
+                        data: 'member_category',
+                        name: 'member_category'
+                    },
+                    {
+                        data: 'member_fees_category',
+                        name: 'member_fees_category'
+                    },
+                 
+                    {
+                        data: 'city',
+                        name: 'city'
+                    },
+                    {
+                        data: 'date',
+                        name: 'date'
                     },
                  
                 ]
