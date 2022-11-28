@@ -77,7 +77,16 @@ class FrontEndController extends Controller
 
     public function homeAboutUs()
     {
-
         return view('frontend.template.aboutus');
+    }
+
+    public function blog()
+    {
+        return view('frontend.pages.blog');
+    }
+
+    public function blog_detail()
+    {
+        return view('frontend.pages.blog_detail');
     }
 }

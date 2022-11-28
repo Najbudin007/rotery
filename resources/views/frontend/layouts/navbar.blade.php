@@ -320,12 +320,12 @@
                     </div>
 
                     <!-- Blog -->
-                    {{-- <div class="pl-3 xl:pl-6">
-                        <a href="blog/index.html"
+                    <div class="pl-3 xl:pl-6">
+                        <a href="{{route('blog')}}"
                             class="relative flex items-center h-full px-3 xl:px-6 cursor-pointer">
                             <div class="font-600">BLOG</div>
                         </a>
-                    </div> --}}
+                    </div>
 
                     <!-- Become A Member -->
                     <div>
