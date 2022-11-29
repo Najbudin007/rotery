@@ -162,9 +162,9 @@
 
                 <div class="text-xs text-textLight pt-6 pb-4">
                     <span>District: </span>
-                    <span class="text-primary font-semibold">1010</span>
+                    <span class="text-primary font-semibold">{{$logos->district}}</span>
                     <span>, Club Number: </span>
-                    <span class="text-primary font-semibold">123456</span>
+                    <span class="text-primary font-semibold">{{$logos->club_number}}</span>
                 </div>
             </div>
         </div>

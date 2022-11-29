@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+
     <!-- Title And Short Description -->
     <div class="max-w-7xl mx-auto">
       <div class="py-6 px-4 md:p-10 xl:px-14 text-center">
@@ -9,13 +10,12 @@
           class="pb-3 lg:pb-6 text-lg md:text-xl lg:text-3xl font-playFair font-700 leading-5 text-primary"
           style="letter-spacing: 0.035em"
         >
-          Amazing Golf Course Around The World
+          {{$blog_details->title}}
         </h1>
 
         <!-- Short Description -->
         <div class="text-xxs md:text-xs">
-          Rotary Club of Himalayan Golf Course is an amazing club that aims to
-          provide astonishing experience....
+          {!! $blog_details->short_description !!}
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
     <!-- Blog Image -->
     <div class="max-w-7xl mx-auto md:px-10 xl:px-14">
       <img
-        src="../resources/images/blog/individual-blog.png"
+        src="{{asset('images/'.$blog_details->image)}}"
         alt="individual blog"
         class="w-full"
       />
@@ -34,34 +34,7 @@
       <div
         class="text-sm text-justify text-textLight lg:text-black md:font-300 leading-7 blog-description"
       >
-        Rotary Himalayan Golf Course is one of the best golf course in the
-        World. We provide best services where our members can enjoy all the
-        facilities to the full extent. Rotary Himalayan Golf Course is one of
-        the best golf course in the World. We provide best services where our
-        members can enjoy all the facilities to the full extent. Rotary
-        Himalayan Golf Course is one of the best golf course in the World. We
-        provide best services where our members can enjoy all the facilities to
-        the full extent. <br />
-
-        Rotary Himalayan Golf Course is one of the best golf course in the
-        World. We provide best services where our members can enjoy all the
-        facilities to the full extent.Rotary Himalayan Golf Course is one of the
-        best golf course in the World. We provide best services where our
-        members can enjoy all the facilities to the full extent. <br />
-
-        Rotary Himalayan Golf Course is one of the best golf course in the
-        World. We provide best services where our members can enjoy all the
-        facilities to the full extent. <br />
-
-        Rotary Himalayan Golf Course is one of the best golf course in the
-        World. We provide best services where our members can enjoy all the
-        facilities to the full extent. <br />
-
-        Rotary Himalayan Golf Course is one of the best golf course in the
-        World. We provide best services where our members can enjoy all the
-        facilities to the full extent.Rotary Himalayan Golf Course is one of the
-        best golf course in the World. We provide best services where our
-        members can enjoy all the facilities to the full extent.
+        {!! nl2br($blog_details->description)!!}
       </div>
       <div
         class="flex justify-between blog-user-detail text-sm text-textBlogUser"
@@ -70,13 +43,13 @@
           <div>
             <img src="../resources/images/icons/user.svg" alt="user icon" />
           </div>
-          <div>Amber Frankestine</div>
+          <div>{{$blog_details->author}}</div>
         </div>
         <div class="flex items-center space-x-2.5">
           <div>
             <img src="../resources/images/icons/time.svg" alt="clock icon" />
           </div>
-          <div>2020-12-12</div>
+          <div>{{$blog_details->created_at->diffForHumans()}}</div>
         </div>
       </div>
     </div>

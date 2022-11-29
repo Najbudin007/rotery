@@ -139,7 +139,14 @@
                           </p>
                       </a>
                   </li>
-
+                  <li class="nav-item">
+                      <a href="{{ route('blogs.index') }}" class="nav-link">
+                          <i class="nav-icon fas fa-blog"></i>
+                          <p>
+                              Blogs
+                          </p>
+                      </a>
+                  </li>
                   <li class="nav-item">
                       <a href="{{ route('aboutUs.index') }}" class="nav-link">
                           <i class="nav-icon fas fa-info-circle"></i>

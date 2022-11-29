@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\blog;
 use App\Models\Gallery;
 use App\Models\Project;
 use App\Models\SiteSetting;
 use App\Models\Slider;
 use App\Models\User;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class FrontEndController extends Controller
 {
@@ -85,8 +87,9 @@ class FrontEndController extends Controller
         return view('frontend.pages.blog');
     }
 
-    public function blog_detail()
-    {
-        return view('frontend.pages.blog_detail');
+    public function blog_detail($slug)
+    {   
+        $blog_details = blog::where('slug', $slug)->first();
+        return view('frontend.pages.blog_detail', compact('blog_details'));
     }
 }

@@ -1,10 +1,18 @@
 @extends('frontend.layouts.master')
 
-@section('content')
+@section('content') 
 
+<?php $Single_blogs = App\Models\blog::where('status','active')->first(); ?>
+<?php $blogs = App\Models\blog::where('status','active')->latest()->paginate(15); ?>
     <!-- Hero Section -->
     <div>
-      <div class="relative hero-section">
+      <div class="relative hero-section" 
+        style="
+        background-image: url('{{asset('images/'.$Single_blogs->image)}}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:500px;
+     ">
         <div class="bg-black bg-opacity-30 w-full h-full">
           <div
             class="max-w-7xl mx-auto h-full text-white grid place-items-center"
@@ -15,20 +23,21 @@
                   class="text-lg md:text-xl lg:text-3xl font-playFair font-900 leading-5"
                   style="letter-spacing: 0.035em"
                 >
-                  Amazing Golf Course Around <br />
-                  The World
+                    {!! nl2br($Single_blogs->title) !!}
                 </div>
                 <div
                   class="text-xxs md:text-xs lg:text-sm"
                   style="letter-spacing: -0.005em"
                 >
-                  Rotary Club of Himalayan Golf Course is an amazing
+                  {{-- Rotary Club of Himalayan Golf Course is an amazing
                   <br class="hidden md:block" />
-                  club that aims to provide astonishing experience....
+                  club that aims to provide astonishing experience.... --}}
+
+                  {!! nl2br($Single_blogs->short_description)!!}
                 </div>
                 <div class="inline-block">
                   <a
-                    href="individual-blog.html"
+                    href="{{route('blog_detail',$Single_blogs->slug)}}"
                     class="font-500 flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded p-3 md:px-6 text-xs text-white"
                   >
                     <div>Read More</div>
@@ -66,12 +75,13 @@
             <div class="swiper-wrapper lg:grid lg:grid-cols-4 lg:gap-8">
 
               <!-- Individual Blog Article -->
+              @foreach ($blogs as $blog)
               <div
                 class="border border-bgLight space-y-3 blog-card rounded-xl swiper-slide"
               >
                 <div>
                   <img
-                    src="../resources/images/home/golf-course.png"
+                    src="{{asset('images/'.$blog->image)}}"
                     alt="individual blog article"
                     class="w-full"
                   />
@@ -81,16 +91,15 @@
                   style="border-left-width: 3px"
                 >
                   <div class="font-600 text-sm">
-                    The best golf course in Nepal
+                   {{$blog->title}}
                   </div>
                 </div>
                 <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry...
+                    {!! $blog->short_description !!}
                 </div>
-                <div class="flex px-4 pb-3">
+                <div class="flex px-4 pb-3"> 
                   <a
-                    href="{{route('blog_detail')}}"
+                    href="{{route('blog_detail',$blog->slug)}}"
                     class="flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
                   >
                     <div>Read More</div>
@@ -103,6 +112,7 @@
                   </a>
                 </div>
               </div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -165,12 +175,13 @@
             <!-- Popular Blog Articles Swiper -->
             <div class="swiper-wrapper lg:grid lg:grid-cols-4 lg:gap-8">
               <!-- Individual Blog Article -->
+              @foreach ($blogs as $blog)
               <div
                 class="border border-bgLight space-y-3 blog-card rounded-xl swiper-slide"
               >
                 <div>
                   <img
-                    src="../resources/images/home/golf-course.png"
+                    src="{{asset('images/'.$blog->image)}}"
                     alt="individual blog article"
                     class="w-full"
                   />
@@ -180,16 +191,15 @@
                   style="border-left-width: 3px"
                 >
                   <div class="font-600 text-sm">
-                    The best golf course in Nepal
+                    {{$blog->title}}
                   </div>
                 </div>
                 <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry...
+                    {!! nl2br($blog->short_description)!!}
                 </div>
                 <div class="flex px-4 pb-3">
                   <a
-                    href="individual-blog.html"
+                    href="{{route('blog_detail', $blog->slug)}}"
                     class="flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
                   >
                     <div>Read More</div>
@@ -202,6 +212,7 @@
                   </a>
                 </div>
               </div>
+              @endforeach
             </div>
           </div>
         </div>
@@ -226,12 +237,13 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
             <!-- Individual Blog Article -->
+            @foreach ($blogs as $blog)
             <div
               class="border border-bgLight space-y-3 rounded-xl swiper-slide"
             >
               <div>
                 <img
-                  src="../resources/images/home/golf-course.png"
+                  src="{{asset('images/'.$blog->image)}}"
                   alt="individual blog article"
                   class="w-full"
                 />
@@ -241,17 +253,15 @@
                 style="border-left-width: 5px"
               >
                 <div class="font-600 text-sm">
-                  The best golf course in Nepal The best golf course in Nepal
+                    {{$blog->title}}
                 </div>
               </div>
               <div class="text-xs text-textDarkSecondary px-4 leading-6">
-                Rotary Club of Himalayan Golf course is the best golf course in
-                Nepal. Rotary Club of Himalayan Golf course is the best golf
-                course in Nepal...
+                {!! nl2br($blog->short_description)!!}
               </div>
               <div class="flex px-4 pb-3">
                 <a
-                  href="individual-blog.html"
+                  href="{{route('blog_detail',$blog->slug)}}"
                   class="flex items-center space-x-2 cursor-pointer text-xs font-500 text-primary message-view-all"
                 >
                   <div>Read More</div>
@@ -264,6 +274,7 @@
                 </a>
               </div>
             </div>
+            @endforeach
           </div>
         </div>
       </div>

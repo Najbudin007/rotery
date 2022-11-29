@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GalleryController;
@@ -50,6 +51,7 @@ Route::group(["middleware" => ["auth", "admin"]], function () {
     Route::post("/deleteSelectedTestimonial", [TestimonialController::class, "deleteSelected"])->name("deleteSelectedTestimonial");
 
     Route::resource("/news", NewsController::class);
+    Route::resource("/blogs", BlogController::class);
     Route::post("/deleteSelectedNews", [NewsController::class, "deleteSelected"])->name("deleteSelectedNews");
     Route::delete("/deleteNewsFile", [NewsController::class, "deleteFile"])->name("deleteFile");
 
@@ -70,6 +72,7 @@ Route::group(["middleware" => ["auth", "admin"]], function () {
     Route::resource("/setting", SiteSettingController::class);
     Route::resource("/aboutUs", AboutUsController::class);
     Route::post("/delete_Selected_aboutUs", [AboutUsController::class, "deleteSelected"])->name("delete_Selected_aboutUs");
+    Route::post("/delete_Selected_blogs", [BlogController::class, "deleteSelected"])->name("delete_Selected_blogs");
     Route::post('/editor-upload', [SummerNoteController::class, "store"])->name("editor-upload");
 });
 
@@ -92,7 +95,7 @@ Route::get('/home-about', [FrontEndController::class, 'homeAboutUs'])->name('hom
 Route::get('/rotary-photos', [FrontEndController::class, 'photo'])->name('photo');
 Route::get('/rotary-videos', [FrontEndController::class, 'videos'])->name('videos');
 Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');
-Route::get('/blog_detail', [FrontEndController::class, 'blog_detail'])->name('blog_detail');
+Route::get('/blog-detail/{slug}', [FrontEndController::class, 'blog_detail'])->name('blog_detail');
 Route::resource("/contactForm", ContactController::class);
 Route::resource("/memberForm", MembersDetailsController::class);
 
