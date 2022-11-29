@@ -77,6 +77,11 @@ class DatabaseSeeder extends Seeder
             "role_id" => "4",
             'remember_token' => Str::random(10),
         ]);
-        SiteSetting::factory()->create();
+        SiteSetting::create([
+            'Site_title' => "ROTERY",
+            'district' => "kathmandu",
+            'club_number' => "9999",
+            'contact_number' => "12345678",
+        ]);
     }
 }
