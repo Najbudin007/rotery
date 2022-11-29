@@ -91,6 +91,8 @@ Route::get('/all-news', [FrontEndController::class, 'news'])->name('allNews');
 Route::get('/home-about', [FrontEndController::class, 'homeAboutUs'])->name('homeAbout');
 Route::get('/rotary-photos', [FrontEndController::class, 'photo'])->name('photo');
 Route::get('/rotary-videos', [FrontEndController::class, 'videos'])->name('videos');
+Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');
+Route::get('/blog_detail', [FrontEndController::class, 'blog_detail'])->name('blog_detail');
 Route::resource("/contactForm", ContactController::class);
 Route::resource("/memberForm", MembersDetailsController::class);
 
