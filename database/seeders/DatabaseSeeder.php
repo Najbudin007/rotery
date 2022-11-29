@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProjectType;
 use App\Models\SiteSetting;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -82,6 +83,9 @@ class DatabaseSeeder extends Seeder
             'district' => "kathmandu",
             'club_number' => "9999",
             'contact_number' => "12345678",
+        ]);
+        ProjectType::create([
+            'type'=>"project"
         ]);
     }
 }
