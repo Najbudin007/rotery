@@ -17,12 +17,12 @@
                     <table class="table table-bordered" id="datatables-example">
                         <thead>
                             <tr>
-                                <th>
+                                {{-- <th>
                                     <input type="checkbox" name="main_checkbox">
-                                </th>
+                                </th> --}}
                                 <th>Id</th>
                                 <th>Name</th>
-                                <th>Action</th>
+                                {{-- <th>Action</th> --}}
                             </tr>
                         </thead>
                     </table>
@@ -38,12 +38,13 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('role.index') }}",
-                columns: [{
-                        data: "checkbox",
-                        name: "checkbox",
-                        orderable: false,
-                        searchable: false
-                    },
+                columns: [
+                    // {
+                    //     data: "checkbox",
+                    //     name: "checkbox",
+                    //     orderable: false,
+                    //     searchable: false
+                    // },
                     {
                         data: 'id',
                         name: 'id'
@@ -52,12 +53,12 @@
                         data: 'name',
                         name: 'name'
                     },
-                    {
-                        data: "action",
-                        name: "action",
-                        orderable: false,
-                        searchable: false
-                    }
+                    // {
+                    //     data: "action",
+                    //     name: "action",
+                    //     orderable: false,
+                    //     searchable: false
+                    // }
                 ]
             });
         });

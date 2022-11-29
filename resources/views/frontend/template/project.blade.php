@@ -29,7 +29,7 @@
         <div class="projects-swiper overflow-hidden relative">
             <div class="swiper-wrapper">
                 <!-- Individual Proect Card -->
-                @foreach (App\Models\Project::where('status', 'active') as $project)
+                @foreach (App\Models\Project::where('status', 'active')->get() as $project)
                     <div class="project-card flex-shrink-0 relative group swiper-slide">
                         <div class="h-full">
                             <img src="{{ asset('images/' . $project->image) }}" alt="individual project"
@@ -40,7 +40,7 @@
                             <div class="text-white text-2xl font-bold">
                                 {{ $project->title }} </div>
                             <div class="flex">
-                                <a href="projects/individual-project.html">
+                                <a href="{{ route('singleProject', $project->slug) }}">
                                     <img src="./resources/images/icons/right-arrow.svg" alt="right arrow"
                                         class="cursor-pointer" />
                                 </a>
