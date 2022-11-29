@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\SiteSetting;
+use App\Models\SiteSetting as SiteSetttings;
 use Illuminate\Database\Seeder;
 
-class Site_Setting extends Seeder
+class SiteSetting extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class Site_Setting extends Seeder
      */
     public function run()
     {
-        SiteSetting::create([
+        SiteSetttings::create([
             'Site_title' => "ROTERY",
             'district' => "kathmandu",
             'club_number' => "9999",

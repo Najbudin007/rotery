@@ -17,16 +17,16 @@ class RoleController extends Controller
     {
         if (request()->ajax()) {
             return datatables()->of(Role::select('*'))
-                ->addColumn('action', function ($role) {
-                    return view('components.tableButton', [
-                        'edit' => ["route" => "role.edit", "id" => $role->id],
-                        'delete' => ["route" => "role.destroy", "id" => $role->id],
-                    ]);
-                })
-                ->addColumn("checkbox", function ($row) {
-                    return '<input type="checkbox" name="per_checkbox" data-id="' . $row->id . '"> <label></label>';
-                })
-                ->rawColumns(['action', 'checkbox'])
+                // ->addColumn('action', function ($role) {
+                //     return view('components.tableButton', [
+                //         'edit' => ["route" => "role.edit", "id" => $role->id],
+                //         'delete' => ["route" => "role.destroy", "id" => $role->id],
+                //     ]);
+                // })
+                // ->addColumn("checkbox", function ($row) {
+                //     return '<input type="checkbox" name="per_checkbox" data-id="' . $row->id . '"> <label></label>';
+                // })
+                // ->rawColumns(['action', 'checkbox'])
                 ->addIndexColumn()
                 ->make(true);
         }

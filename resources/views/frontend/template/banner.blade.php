@@ -3,8 +3,7 @@
     <div>
         <!-- Hero Section For Mobile -->
         <div class="md:hidden">
-            <img src="./resources/images/home/hands-together-mobile.png" {{ asset('images/' . $banner->image) }}
-                class="w-full" alt="hands together" />
+            <img src="{{ asset('images/' . $banner->image) }}" class="w-full" alt="hands together" />
         </div>
 
         <!-- Hero Section For Tablet -->
@@ -41,7 +40,8 @@
         </div>
 
         <!-- Hero Section For Laptop and Higher Resolution Devices -->
-        <div class="hidden lg:block relative hero-section">
+        <div class="hidden lg:block relative hero-section mb-5"
+            style="background-image: url({{ asset('images/' . $banner->image) }}) !important;">
             <div class="bg-black bg-opacity-30 w-full h-full">
                 <div class="relative max-w-7xl mx-auto h-full text-white grid place-items-center">
                     <div class="flex w-full px-10 xl:px-14 space-x-6">
@@ -65,7 +65,7 @@
                                 {!! nl2br($banner->short_description) !!}
                             </div>
                             <div class="inline-block">
-                                <a href="{{ route('about-our-club') }}"
+                                <a href="{{ $banner->link }}"
                                     class="flex items-center space-x-2 cursor-pointer bg-secondary overflow-hidden rounded px-6 py-3 text-sm text-white">
                                     <div>Read More</div>
                                     <div>
@@ -89,9 +89,9 @@
 
     <!-- Small Icons For Laptop and Higher Resolutions Only -->
     <div class="hidden lg:flex py-4 px-10 xl:px-14 max-w-7xl mx-auto space-x-2">
-        <div class="h-2 w-6 bg-secondary rounded-full"></div>
+        {{-- <div class="h-2 w-6 bg-secondary rounded-full"></div>
         <div class="h-2 w-2 bg-bgLight rounded-full"></div>
         <div class="h-2 w-2 bg-bgLight rounded-full"></div>
-        <div class="h-2 w-2 bg-bgLight rounded-full"></div>
+        <div class="h-2 w-2 bg-bgLight rounded-full"></div> --}}
     </div>
 @endif
