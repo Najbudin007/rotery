@@ -96,6 +96,7 @@ Route::get('/rotary-photos', [FrontEndController::class, 'photo'])->name('photo'
 Route::get('/rotary-videos', [FrontEndController::class, 'videos'])->name('videos');
 Route::get('/blog', [FrontEndController::class, 'blog'])->name('blog');
 Route::get('/blog-detail/{slug}', [FrontEndController::class, 'blog_detail'])->name('blog_detail');
+Route::get('/news-detail/{slug}', [FrontEndController::class, 'news_detail'])->name('news_detail');
 Route::resource("/contactForm", ContactController::class);
 Route::resource("/memberForm", MembersDetailsController::class);
 
