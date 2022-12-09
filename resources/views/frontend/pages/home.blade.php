@@ -1,6 +1,9 @@
 @extends('frontend.layouts.master')
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('./resources/css/home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/resources/css/home.css') }}" />
+@endsection
+@section('scripts')
+    <script src="{{ asset('/resources/js/slider.js') }}"></script>
 @endsection
 @section('content')
     <!-- Hero Section -->

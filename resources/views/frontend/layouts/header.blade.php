@@ -23,8 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('resources/css/styles.css') }}" />
-    <link rel="stylesheet" href="{{ asset('./resources/css/common.css') }}" />
-    <link rel="stylesheet" href="{{ asset('./resources/css/about.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/resources/css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/resources/css/common.css') }}" />
     @yield('styles')
 </head>

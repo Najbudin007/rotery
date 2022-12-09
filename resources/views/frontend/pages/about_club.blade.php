@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master')
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('./resources/css/about.css') }}" />
+@endsection
 @section('content')
     <?php $about_club = App\Models\aboutus::first();
     ?>
