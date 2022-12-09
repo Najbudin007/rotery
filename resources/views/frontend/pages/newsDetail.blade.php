@@ -43,7 +43,7 @@
           <div>
             <img src="../resources/images/icons/user.svg" alt="user icon" />
           </div>
-          <div>{{$news_details->author}}</div>
+          {{-- <div>{{$news_details->author}}</div> --}}
         </div>
         <div class="flex items-center space-x-2.5">
           <div>
