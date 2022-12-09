@@ -29,7 +29,7 @@ $news = App\Models\News::where('status', 'active')
                         <img src="{{ asset('images/' . $new->image) }}" alt="golf course" class="w-full" />
                     </div>
                     <div class="px-4 border-l border-secondary" style="border-left-width: 3px">
-                        <a href="news/news-detail.html" class="text-sm text-primary font-600">
+                        <a href="{{route('news_detail',$new->slug)}}" class="text-sm text-primary font-600">
                             {{ $new->title }} </a>
                     </div>
                     <div class="text-xs text-textDarkSecondary px-4 leading-6">
@@ -54,7 +54,7 @@ $news = App\Models\News::where('status', 'active')
                     </div>
                     <div class="flex flex-col justify-between py-6 space-y-4">
                         <div class="h-[60px]">
-                            <a href="news/news-detail.html"
+                            <a href="{{route('news_detail',$new->slug)}}"
                                 class="text-lg text-primary border-l line-clamp-2 border-secondary px-4 font-600"
                                 style="border-left-width: 3px">
                                 {{ $new->title }}

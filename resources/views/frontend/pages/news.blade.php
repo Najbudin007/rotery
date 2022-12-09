@@ -3,21 +3,37 @@
     <link rel="stylesheet" href="{{ asset('./resources/css/news.css') }}" />
 @endsection
 @section('content')
+
+<?php
+$news = App\Models\News::where('status', 'active')
+    ->latest()
+    ->get();
+?>
+
+<?php
+$notice = App\Models\Notice::where('status', 'active')
+    ->latest()
+    ->get();
+?>
+
+<?php
+$news_banner = App\Models\News::where('status', 'active')
+    ->first();
+?>
     <div class="hero-section relative mb-24 md:mb-32 lg:mb-40">
         <div class="max-w-5xl mx-auto container absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 md:p-10">
             <div class="bg-white shadow-lg p-5 md:p-10 space-y-5">
                 <h1 class="tracking-header font-playFair sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-                    Rotary Club of Himalayan sets new record for having the most members
-                    in Nepal.
+                  {{$news_banner->title}}
                 </h1>
                 <div class="flex items-center text-sm space-x-6 md:space-x-10">
                     <div class="flex items-center space-x-2 pr-10 border-r border-black">
                         <div class="w-7 h-7 flex-shrink-0">
-                            <img src="../resources/images/news/profile.png" class="w-full h-full" alt="Anit Gurung">
+                            <img src="{{asset('images/'.$news_banner->image)}}" class="w-full h-full" alt="Anit Gurung">
                         </div>
-                        <div class="truncate">Anit Gurung</div>
+                        <div class="truncate">RotarY News</div>
                     </div>
-                    <div>30/12/2022</div>
+                    <div>{{$news_banner->created_at->diffForHumans()}}</div>
                 </div>
             </div>
         </div>
@@ -37,269 +53,30 @@
                     <!-- All Latest News Swiper And Slider -->
                     <div class="swiper-wrapper" id="swiper-wrapper-3d6ae7cc1899ca83" aria-live="off"
                         style="transition-duration: 0ms; transform: translate3d(-1576px, 0px, 0px);">
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="4 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="5 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="6 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-prev"
-                            data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="1 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-active"
-                            data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="2 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-next"
-                            data-swiper-slide-index="2" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="3 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
-                            data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="4 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
+                        @foreach ($news as $new)
                         <!-- Invididual Latest News Card -->
                         <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
                             data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;" role="group"
                             aria-label="5 / 6">
                             <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
+                                <img src="{{asset('images/' .$new->image)}}" alt="Latest News" class="w-full">
                             </div>
                             <div class="pt-2">
                                 <div class="text-sm text-primary border-l border-secondary px-4"
                                     style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
+                                    <a href="{{route('news_detail',$new->slug)}}" class="font-600 text-sm md:text-base lg:text-lg">
+                                       {{$new->title}}
                                     </a>
                                 </div>
                             </div>
                             <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
+                               {!! $new->short_description !!}
                             </div>
 
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
+                            <div class="text-secondary text-xxs px-4 pb-6">{{$new->created_at->diffForHumans()}}</div>
                         </div>
+                        @endforeach
 
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
-                            data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="6 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-prev"
-                            data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="1 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="2 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-swiper-slide-index="2" role="group" aria-label="3 / 6"
-                            style="width: 364px; margin-right: 30px;">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
                     </div>
 
                     <!-- Left And Right Arrows For News Slider -->
@@ -345,119 +122,20 @@
                     <!-- All Notice Highlights Swiper And Slider -->
                     <div class="swiper-wrapper" id="swiper-wrapper-e88601f4ea855658" aria-live="polite"
                         style="transition-duration: 0ms; transform: translate3d(-1560px, 0px, 0px);">
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate swiper-slide-prev"
-                            data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <!-- Invididual Notice Highlight Card -->
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-active"
-                            data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
 
                         <!-- Invididual Notice Highlight Card -->
+                        @foreach ($notice as $noti)
                         <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-next"
                             data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="margin-right: 30px;">
                             <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
+                              {{$noti->title}}
                             </div>
-                            <div>30/12/2022</div>
+                            <div>{{$noti->created_at->diffForHumans()}}</div>
                             <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
+                               {!! $noti->short_description !!}
                             </div>
                         </div>
-
-                        <!-- Invididual Notice Highlight Card -->
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate-prev"
-                            data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
-                        <div class="bg-white text-xs md:text-sm lg:text-base space-y-2.5 lg:space-y-4 notice-highlight-card cursor-pointer rounded-tl rounded-bl border-l-6 border-l-secondary swiper-slide border p-4 lg:p-7 swiper-slide-duplicate"
-                            data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="margin-right: 30px;">
-                            <div class="font-600 text-sm sm:text-base lg:text-lg">
-                                Rotary Club of Himalayan Community Event at New Plaza
-                            </div>
-                            <div>30/12/2022</div>
-                            <div class="text-textDark">
-                                We’ll have a meeting regarding the event which will be held
-                                tomorrow (30/12/2022). All the staff members are requested to
-                                attend the meeting at 10:15 am.
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
                     <!-- Left And Right Arrows For Notice Slider -->
@@ -502,269 +180,29 @@
                     <!-- All Popular News Swiper And Slider -->
                     <div class="swiper-wrapper" id="swiper-wrapper-cb26e104d7627a14d" aria-live="off"
                         style="transition-duration: 0ms; transform: translate3d(-2758px, 0px, 0px);">
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-prev"
-                            data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="4 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="5 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate swiper-slide-duplicate-next"
-                            data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="6 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
                         <!-- Invididual Popular News Card -->
+                        @foreach ($news as $new)
                         <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
                             data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;" role="group"
                             aria-label="1 / 6">
                             <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
+                                <img src="{{asset('images/'.$new->image)}}" alt="Latest News" class="w-full">
                             </div>
                             <div class="pt-2">
                                 <div class="text-sm text-primary border-l border-secondary px-4"
                                     style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
+                                    <a href="{{route('news_detail',$new->slug)}}" class="font-600 text-sm md:text-base lg:text-lg">
+                                      {{$new->title}}
                                     </a>
                                 </div>
                             </div>
                             <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
+                                {!! $new->short_description !!}
                             </div>
 
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
+                            <div class="text-secondary text-xxs px-4 pb-6">{{$new->created_at->diffForHumans()}}</div>
                         </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
-                            data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="2 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
-                            data-swiper-slide-index="2" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="3 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-prev"
-                            data-swiper-slide-index="3" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="4 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-active"
-                            data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="5 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-
-                        <!-- Invididual Latest News Card -->
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-next"
-                            data-swiper-slide-index="5" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="6 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="0" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="1 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-1.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="1" style="width: 364px; margin-right: 30px;" role="group"
-                            aria-label="2 / 6">
-                            <div>
-                                <img src="../resources/images/news/latest-news-2.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
-                        <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border swiper-slide-duplicate"
-                            data-swiper-slide-index="2" role="group" aria-label="3 / 6"
-                            style="width: 364px; margin-right: 30px;">
-                            <div>
-                                <img src="../resources/images/news/latest-news-3.png" alt="Latest News" class="w-full">
-                            </div>
-                            <div class="pt-2">
-                                <div class="text-sm text-primary border-l border-secondary px-4"
-                                    style="border-left-width: 3px">
-                                    <a href="news-detail.html" class="font-600 text-sm md:text-base lg:text-lg">
-                                        Lorem Ipsum is simply dummy text
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="text-xs lg:text-sm text-textDarkSecondary px-4 leading-6">
-                                Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry...
-                            </div>
-
-                            <div class="text-secondary text-xxs px-4 pb-6">12-20-2021</div>
-                        </div>
+                        @endforeach
                     </div>
 
                     <!-- Left And Right Arrows For Popular News Slider -->

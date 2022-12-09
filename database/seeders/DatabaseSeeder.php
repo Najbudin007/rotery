@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProjectType;
 use App\Models\SiteSetting;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -77,6 +78,14 @@ class DatabaseSeeder extends Seeder
             "role_id" => "4",
             'remember_token' => Str::random(10),
         ]);
-        SiteSetting::factory()->create();
+        SiteSetting::create([
+            'Site_title' => "ROTERY",
+            'district' => "kathmandu",
+            'club_number' => "9999",
+            'contact_number' => "12345678",
+        ]);
+        ProjectType::create([
+            'type'=>"project"
+        ]);
     }
 }

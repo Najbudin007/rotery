@@ -17,10 +17,7 @@ class site_setting extends Factory
     public function definition()
     {
         return [
-            'Site_title' => "ROTERY",
-            'district' => "kathmandu",
-            'club_number' => "9999",
-            'contact_number' => "12345678",
+           
         ];
     }
 }

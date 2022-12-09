@@ -48,6 +48,11 @@ class MembersDetailsController extends Controller
             'experties_area' => 'required',
             'duty_stations' => 'required',
             'job_title' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+            'date' => 'required',
+            'member_category' => 'required',
+            'member_fees_category' => 'required',
         ]);
 
 
