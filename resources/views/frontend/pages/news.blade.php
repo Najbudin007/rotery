@@ -54,6 +54,7 @@ $news_banner = App\Models\News::where('status', 'active')
                     <div class="swiper-wrapper" id="swiper-wrapper-3d6ae7cc1899ca83" aria-live="off"
                         style="transition-duration: 0ms; transform: translate3d(-1576px, 0px, 0px);">
                         @foreach ($news as $new)
+                        
                         <!-- Invididual Latest News Card -->
                         <div class="bg-white space-y-3 xl:space-y-4 news-card rounded-xl swiper-slide border"
                             data-swiper-slide-index="4" style="width: 364px; margin-right: 30px;" role="group"
@@ -234,4 +235,49 @@ $news_banner = App\Models\News::where('status', 'active')
             </div>
         </div>
     </div>
+    <script>
+
+      const newsSwiper = new Swiper(".news-swiper", {
+        direction: "horizontal",
+        speed: 1000,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      const noticeSwiper = new Swiper(".notice-swiper", {
+        direction: "horizontal",
+        speed: 1000,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: "auto",
+          },
+        },
+      });
+  
+    </script>
 @endsection
+

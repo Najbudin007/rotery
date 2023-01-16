@@ -7,7 +7,8 @@
     @endif
     @if (isset($view))
         <div class="view">
-            <a href="#" class="btn btn-sm btn-outline-success"><i class="ri-eye-line"></i></a>
+            <a href="{{ route($view['route'], $view['id']) }}" class="btn btn-sm btn-outline-success"><i
+                    class="ri-eye-line"></i></a>
 
         </div>
     @endif

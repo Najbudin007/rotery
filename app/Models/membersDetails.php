@@ -9,4 +9,10 @@ class membersDetails extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $casts = [
+        "residence" => "array",
+        "business" => "array",
+        "others" => "array",
+        "alternate_address" => "array",
+    ];
 }

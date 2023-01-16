@@ -26,16 +26,27 @@ class UserController extends Controller
                                                                                                                                                                                 if (request()->ajax()) {
             return datatables()->of(User::latest()->get())
                 ->addColumn('action', function ($user) {
-                    return view('components.tableButton', [
+                    if($user->role->name == "admin"){
+                       return view('components.tableButton', [
+                        'edit' => ["route" => "user.edit", "id" => $user->id]]);
+                    }else{
+                         return view('components.tableButton', [
                         'edit' => ["route" => "user.edit", "id" => $user->id],
                         'delete' => ["route" => "user.destroy", "id" => $user->id],
                     ]);
+                    }
+                   
                 })
                 ->addColumn('role', function ($user) {
                     return $user->role->name ?? "not defined";
                 })
                 ->addColumn("checkbox", function ($row) {
-                    return '<input type="checkbox" name="per_checkbox" data-id="' . $row->id . '"> <label></label>';
+                    if($row->role->name == "admin"){
+                        return ;
+                    }else{
+                        return '<input type="checkbox" name="per_checkbox" data-id="' . $row->id . '"> <label></label>'; 
+                    }
+                   
                 })
                 ->rawColumns(['action', 'checkbox', "roll"])
                 ->addIndexColumn()

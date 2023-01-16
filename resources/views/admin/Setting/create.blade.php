@@ -38,10 +38,10 @@
                             </div>
 
                             <div class="form-group">
-                                <img id="output00" alt="" style="height: 100px; object-fit:cover; width:100px;"
+                                <img id="output01" alt="" style="height: 100px; object-fit:cover; width:100px;"
                                     src="{{ asset('images/' . $setting->alternate_image) }}">
                                 <label for="exampleInputEmail1"> Alternate Logo</label>
-                                <input type="file" class="form-control" onchange="loadFile9(event)"
+                                <input type="file" class="form-control" onchange="loadFile10(event)"
                                     name="alternate_image">
                                 @error('alternate_image')
                                     <div class="text-red">
@@ -125,15 +125,22 @@
             </form>
         </div>
     </div>
-    <script>
+   
+@endsection
+@section('scripts')' <script>
         var loadFile9 = function(event) {
             let image77 = document.getElementById('output00');
             image77.src = URL.createObjectURL(event.target.files[0]);
             image77.style.display = "block"
         };
     </script>
-@endsection
-@section('scripts')
+     <script>
+        var loadFile10 = function(event) {
+            let image77 = document.getElementById('output01');
+            image77.src = URL.createObjectURL(event.target.files[0]);
+            image77.style.display = "block"
+        };
+    </script>
     <script>
         $('#summernote').summernote({
             height: 100, // set editor height

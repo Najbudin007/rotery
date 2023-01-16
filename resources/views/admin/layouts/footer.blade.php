@@ -1,5 +1,5 @@
  <footer class="main-footer">
-     2019 Rotary Club Kathmandu Mid-Town. All rights reserved.
+     2022 Rotary club of Himalayan Golfers. All rights reserved.
  </footer>
 
  <!-- Control Sidebar -->

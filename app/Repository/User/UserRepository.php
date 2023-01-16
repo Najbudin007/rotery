@@ -5,6 +5,7 @@ namespace App\Repository\User;
 use App\Models\User;
 use App\Models\UserRole;
 use App\Repository\BaseRepository;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository extends BaseRepository
 {
@@ -19,6 +20,8 @@ class UserRepository extends BaseRepository
             $data['image']->move(public_path("profile"), $img);
             $data['image'] = $img;
         }
+                $data["password"] = Hash::make($data['password']);
+
         $this->model->create($data)->id;
     }
     public function update($user, array $data)
@@ -30,8 +33,10 @@ class UserRepository extends BaseRepository
                 $data['image'] = $img;
             }
         }
-        if ($data["password"] !== "") {
-            $data["password"] = bcrypt($data["password"]);
+        if ($data["password"] !== "" && !Hash::check($data['password'], $user->password)) {
+            $data["password"] = Hash::make($data["password"]);
+        }else{
+            $data["password"] = $user->password;
         }
         $this->model->find($user->id)->update($data);
     }

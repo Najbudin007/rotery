@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="text-textLight text-sm text-justify leading-7 tracking-header">
-                    {{ $about->description }}
+                    {!! $about->description !!}
                 </div>
                 <div class="flex md:justify-end lg:justify-start pt-3">
                     <a href="{{ route('about-our-club') }}"

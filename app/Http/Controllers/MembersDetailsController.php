@@ -15,8 +15,16 @@ class MembersDetailsController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $aboutUs = membersDetails::get();
+            $aboutUs = membersDetails::latest()->get();
             return datatables()->of($aboutUs)
+                ->addColumn('action', function ($user) {
+                    return view('components.tableButton', [
+                        'view' => ["route" => "memberForm.show", "id" => $user->id],
+                        // 'delete' => ["route" => "user.destroy", "id" => $user->id],
+                    ]);
+                })
+                ->rawColumns(['action'])
+
                 ->addIndexColumn()
                 ->make(true);
         }
@@ -42,17 +50,33 @@ class MembersDetailsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'experties_area' => 'required',
-            'duty_stations' => 'required',
-            'job_title' => 'required',
-            'city' => 'required',
-            'country' => 'required',
-            'date' => 'required',
-            'member_category' => 'required',
-            'member_fees_category' => 'required',
+            'first_name' => "sometimes",
+            'middle_name' => "sometimes",
+            'family_name' => "sometimes",
+            'dob' => "sometimes",
+            'gender' => "sometimes",
+            'married' => "sometimes",
+            'former_member' => "sometimes",
+            'alumnus' => "sometimes",
+            'email' => "sometimes",
+            'home_address' => "sometimes",
+            'phone_number' => "sometimes",
+            'country' => "sometimes",
+            'postal_code' => "sometimes",
+            'alternative_phone_number' => "sometimes",
+            'mail_address' => "sometimes",
+            "alternative_phone_number" => "sometimes",
+            "job_title" => "sometimes",
+            "res_business" => "sometimes",
+            "classification" => "sometimes",
+            "business_address" => "sometimes",
+            "business_telephone" => "sometimes",
+            "fax" => "sometimes",
+            "business_email" => "sometimes",
+            "residence" => "sometimes",
+            "others" => "sometimes",
+            "business" => "sometimes",
+            "alternate_address" => "sometimes",
         ]);
 
 
@@ -60,7 +84,7 @@ class MembersDetailsController extends Controller
 
         membersDetails::create($input);
 
-        return redirect()->back()->with('success' , 'Members Added  Successfully');
+        return redirect()->back()->with('success', 'Members Added  Successfully');
     }
 
     /**
@@ -69,9 +93,10 @@ class MembersDetailsController extends Controller
      * @param  \App\Models\membersDetails  $membersDetails
      * @return \Illuminate\Http\Response
      */
-    public function show(membersDetails $membersDetails)
+    public function show($id)
     {
-        //
+        $membersDetails = membersDetails::find($id);
+        return view('admin.memberdetail.view', ["detail" => $membersDetails]);
     }
 
     /**

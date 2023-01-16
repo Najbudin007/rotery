@@ -5,6 +5,7 @@
 <?php $Single_blogs = App\Models\blog::where('status','active')->first(); ?>
 <?php $blogs = App\Models\blog::where('status','active')->latest()->paginate(15); ?>
     <!-- Hero Section -->
+    @if(isset($Single_blogs))
     <div>
       <div class="relative hero-section" 
         style="
@@ -55,7 +56,7 @@
         </div>
       </div>
     </div>
-
+@endif
     <!-- Latest Blog Articles -->
     <div>
       <div

@@ -1,4 +1,3 @@
-
 <?php
 
 use App\Http\Controllers\AboutUsController;
@@ -81,6 +80,8 @@ Route::group(
     ["middleware" => ["auth", "member"], "prefix" => "member"],
     function () {
         Route::get("/dashboard", [MemberController::class, "dashboard"])->name("memberDashboard");
+                  Route::post("/user/id", [UserController::class, 'update'])->name('updateProfile');
+
     }
 );
 Route::get('/about-our-club', [FrontEndController::class, 'aboutUs'])->name('about-our-club');

@@ -36,4 +36,37 @@
 
     <!-- Messages -->
     @include('frontend.template.testimonial')
+    
+    <script>
+      // Swiper for hero section
+      var menu = ["Slide 1", "Slide 2", "Slide 3"];
+
+      var heroSectionSwiper = new Swiper(".bannerSwiper", {
+        direction: "horizontal",
+        speed: 1000,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseOver: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "</span>";
+          },
+        },
+      });
+
+      window.addEventListener("scroll", function () {
+        const scrollArrow = document.getElementById("scroll-arrow");
+        if (window.scrollY > 650) {
+          scrollArrow.style.display = "none";
+        } else {
+          scrollArrow.style.display = "flex";
+        }
+      });
+    </script>
 @endsection

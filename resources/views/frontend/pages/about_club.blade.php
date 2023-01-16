@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('./resources/css/about.css') }}" />
 @endsection
 @section('content')
-    <?php $about_club = App\Models\aboutus::first();
+    <?php $about_club = App\Models\aboutUs::first();
     ?>
     @if (isset($about_club))
         <div class="bg-primary">

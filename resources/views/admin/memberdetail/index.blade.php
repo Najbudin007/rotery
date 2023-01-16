@@ -11,13 +11,8 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
                                 <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Member Category</th>
-                                <th>Member Fees Category</th>
-                                <th>City</th>
-                                <th>Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                     </table>
@@ -34,45 +29,24 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('memberForm.index') }}",
-                columns: [
-                    {
+                columns: [{
                         data: 'id',
                         name: 'id'
                     },
-                    {
-                        data: 'name',
-                        name: 'name'
-                    },
+
                     {
                         data: 'email',
                         name: 'email'
                     },
                     {
-                        data: 'phone',
-                        name: 'phone'
-                    },
-                    {
-                        data: 'member_category',
-                        name: 'member_category'
-                    },
-                    {
-                        data: 'member_fees_category',
-                        name: 'member_fees_category'
-                    },
-                 
-                    {
-                        data: 'city',
-                        name: 'city'
-                    },
-                    {
-                        data: 'date',
-                        name: 'date'
-                    },
-                 
+                        data: "action",
+                        name: "action",
+                        orderable: false,
+                        searchable: false
+                    }
+
                 ]
             });
         });
-
-
     </script>
 @endsection

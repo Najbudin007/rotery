@@ -61,7 +61,7 @@ $news = App\Models\News::where('status', 'active')
                             </a>
                         </div>
                         <div class="text-sm text-textDarkSecondary px-4 leading-7 line-clamp-2">
-                            {{ $new->short_description }}
+                            {!! $new->short_description !!}
                         </div>
                         <div class="text-secondary text-xxs px-4">{{ $new->created_at->diffForHumans() }}</div>
                     </div>
